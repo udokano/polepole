@@ -1,0 +1,168 @@
+/*フッターエリア*/
+
+footer {
+	background-color: #008935;
+	color: white;
+}
+
+.footerInner {
+	width: 80%;
+	max-width: 1240px;
+	margin: 0 auto;
+}
+
+
+
+.footerNav{
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.23rem 20px 1.112rem;
+	display: flex;
+	justify-content: space-between;
+}
+.footerNav ul a:hover{
+	text-decoration: underline;
+	color: yellow;
+}
+
+.footerNav ul.footerNaviCollam  {
+	text-align: center;
+	width: 80%;
+	margin: auto;
+}
+
+.footerNav ul > li {
+	display: inline-block;
+			padding: 1px 5px;
+			line-height: 1;
+
+}
+
+
+.footerNav ul > li a {
+	display: block;
+
+}
+
+.footerNav ul > li a::after {
+	content: "|";
+	display: inline-block;
+	padding-left: 10px;
+	height: 100%;
+	
+}
+
+.footerNav ul > li:last-child a::after {
+	content: "";
+}
+
+.footerNav ul > li > a{
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+
+.footerBottom {
+	width: 100%;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+
+.access {
+	float: left;
+	width: 70%;
+	padding-left: 5%;
+}
+
+#footer_logo {
+	float: left;
+}
+
+.left {
+	float: left;
+}
+
+.accessText {
+	float: left;
+	padding-left: 15px;
+	width: 65%;
+}
+
+.accessText h4 {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.large {
+	display: block;
+	float: left;
+	width: 5em;
+}
+
+#accessButton {
+	margin-top: 5px;
+}
+
+#accessButton a{
+	padding: 2px 10px;
+	background-color: #ff6600;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+}
+
+#accessButton a:hover{
+	background-color: #AA0000;
+}
+
+.footerSns {
+	float: right;
+	width: 25%;
+
+}
+
+.footerSns li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+#copy {
+	background-color: #ff0000;
+	padding: 5px 0;
+}
+
+#copyRight {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 1.2;
+	font-size: .5rem;
+}
+/*スクロールトップ*/
+#pagetop {
+	position: fixed;
+	bottom: 30px;
+	right: 40px;
+	z-index: 9999;
+	display: none;
+	background-color: orangered;
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.top_triangle {
+	display: inline-block;
+	border-right: 20px solid transparent;
+    border-bottom: 28px solid white;
+    border-left: 20px solid transparent;
+	position: absolute;
+	top: 0;
+	left: -2px;
+	right: 0;
+	bottom: 5px;
+	margin: auto;
+	width: 0;
+	height: 0;
+}

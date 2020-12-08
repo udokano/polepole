@@ -1,0 +1,74 @@
+/* ２カラム設定 */
+
+/*メインコンテンツエリア*/
+
+.content {
+    margin: 0 auto;
+    padding-bottom: 3.78rem;
+    max-width: 1050px;
+    width: 92%;
+
+    &--top {
+        max-width: 1050px;
+        width: 92%;
+        margin: 1.2rem auto;
+    }
+
+    &--event {
+        max-width: 1000px;
+    }
+
+    &__main {
+        width: 72%;
+        float: right;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            float: none;
+            margin-bottom: 2.87rem;
+        }
+
+        &--top {
+            @media (min-width: 768px) {
+                float: left;
+                width: 79%;
+            }
+
+            @media (max-width: 767px) {
+                margin-bottom: 7.88rem;
+            }
+        }
+
+        &--center {
+            max-width: 780px;
+            width: 100%;
+            margin: 0 auto;
+            float: none;
+        }
+    }
+
+    &__sidebar {
+        float: left;
+        width: 22%;
+
+        @media (max-width: 767px) {
+            width: 92%;
+            margin: 0 auto;
+            float: none;
+        }
+
+        &--top {
+            @media (min-width: 768px) {
+                float: right;
+                width: 25%;
+            }
+        }
+    }
+}
+
+#top {
+    width: 63%;
+    float: left;
+}
+
+.main_area {}

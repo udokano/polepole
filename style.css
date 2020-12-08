@@ -1,0 +1,1238 @@
+@charset "UTF-8";
+/* reset & set
+-------------------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+  border: 0;
+  outline: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000; }
+
+a img:hover {
+  opacity: 0.8; }
+
+li img {
+  display: block; }
+
+a img {
+  border-style: none; }
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+  height: auto;
+  object-fit: cover; }
+
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  font: inherit; }
+
+input:focus,
+button:focus,
+select:focus {
+  outline: 0; }
+
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield; }
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none; }
+
+/* Turn off scroll bars in IE unless needed */
+textarea {
+  overflow: auto; }
+
+/*クリアフィックス*/
+.cf:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
+
+.sp {
+  display: none; }
+
+h2, h3, h4 {
+  font-weight: 300; }
+
+html {
+  font-size: 100%;
+  /*18px*/ }
+
+body {
+  line-height: 1.5;
+  color: black;
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", serif; }
+
+.subti {
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+  margin-bottom: 80px;
+  font-weight: 600;
+  text-align: center;
+  position: relative; }
+  .subti::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 50%;
+    bottom: -6px;
+    width: 160px;
+    background-color: #000;
+    transform: translateX(-50%); }
+
+.triangle {
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #b2ce54;
+  border-left: 50px solid transparent; }
+
+.arrow::before {
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  border-top: 1px solid #7a0;
+  border-right: 1px solid #7a0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: #0f388c;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 200px;
+  color: #fff;
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", serif;
+  letter-spacing: 3px; }
+
+.btn::after {
+  content: "";
+  position: absolute;
+  background: url("../img/arrow.png") no-repeat 0% 50%;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  background-size: 26px; }
+
+.btn:hover {
+  opacity: .8; }
+
+.c-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 340px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: .5s ease-in; }
+  .c-btn:hover {
+    background-color: #fff;
+    color: #333; }
+
+.c-btn:first-child {
+  margin-right: 8px; }
+
+.c-btn:last-child {
+  margin-left: 8px; }
+
+@media only screen and (max-width: 768px) {
+  .c-btn {
+    display: block;
+    width: 84%;
+    min-width: 252px;
+    margin: 0 auto;
+    height: 80px;
+    line-height: 80px;
+    font-size: 18px;
+    letter-spacing: 1px; }
+
+  .c-btn:first-child {
+    margin-right: auto;
+    margin-bottom: 20px; }
+
+  .c-btn:last-child {
+    margin-left: auto; } }
+.category {
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 9px;
+  line-height: 1.0; }
+
+.wrap {
+  width: 100%;
+  overflow: hidden; }
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 87.5%; }
+
+  .pc {
+    display: none; }
+
+  .sp {
+    display: block; }
+
+  .subti {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    text-align: center;
+    position: relative; }
+    .subti::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 50%;
+      bottom: -6px;
+      width: 160px;
+      background-color: #4A4444;
+      transform: translateX(-50%); } }
+header .header-center {
+  width: 1100px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 70px; }
+  header .header-center .logo-cach {
+    padding-top: 7px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: .78rem;
+    font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+    color: #666666; }
+  header .header-center .logo {
+    text-align: center;
+    width: 420px;
+    margin: 0 auto; }
+  header .header-center .tel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 240px;
+    background-color: #2db5aa;
+    border-radius: 0 0 5px 5px; }
+    header .header-center .tel a {
+      display: block;
+      padding: 12px; }
+      header .header-center .tel a .in {
+        padding-left: 35px;
+        background: url("../img/tel.png") no-repeat left top/22px;
+        color: #fff;
+        font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif; }
+        header .header-center .tel a .in .num {
+          font-size: 20px;
+          line-height: 1.0;
+          margin-bottom: 7px; }
+        header .header-center .tel a .in p {
+          font-size: 12px;
+          letter-spacing: 1px; }
+
+nav ul.gnav {
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 8px; }
+  nav ul.gnav li {
+    display: inline-block;
+    margin: 0 50px; }
+    nav ul.gnav li a {
+      font-family: "ＭＳ Ｐ明朝", "MS PMincho","ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "serif";
+      font-weight: 400;
+      font-size: 1.01rem;
+      letter-spacing: 2px;
+      position: relative; }
+      nav ul.gnav li a::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        height: 1px;
+        width: 130px;
+        background-color: #000;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: ease-in .5s; }
+      nav ul.gnav li a:hover::after {
+        opacity: 1; }
+      nav ul.gnav li a:hover {
+        opacity: .8; }
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(254, 254, 254, 0.9);
+  top: 0;
+  z-index: 9999; }
+  .fixed .gnav {
+    padding: 15px 0;
+    margin-bottom: 0; }
+
+.main-img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px; }
+  .main-img h2 {
+    font-size: 1.62rem;
+    line-height: 1.82;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: a-otf-ryumin-pr6n,serif;
+    font-weight: 300;
+    font-style: normal;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 120px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 2px 11.28px rgba(0, 0, 0, 0.4); }
+    .main-img h2 .large {
+      font-size: 2.6rem;
+      letter-spacing: 4px; }
+
+.cach-area {
+  width: 100%;
+  background: url("../img/bg.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  margin-bottom: 80px; }
+  .cach-area .inner {
+    width: 800px;
+    padding: 80px 0;
+    margin: 0 auto; }
+    .cach-area .inner h2 {
+      font-family: a-otf-ryumin-pr6n,serif;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 1.6rem;
+      line-height: 1.65;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 60px;
+      letter-spacing: 3px;
+      text-shadow: 0px 2px 11.28px rgba(0, 0, 0, 0.4); }
+    .cach-area .inner p {
+      line-height: 1.9;
+      padding: 0 90px;
+      margin-bottom: 80px;
+      font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+      color: #fff; }
+    .cach-area .inner .btn-wra {
+      text-align: center; }
+      .cach-area .inner .btn-wra .btn {
+        width: 270px; }
+
+#area1 {
+  background-image: url("../img/bgimg1.jpg"); }
+
+#area2 {
+  background-image: url("../img/bgimg3.jpg"); }
+
+#area3 {
+  background-image: url("../img/bgimg2.jpg");
+  margin-bottom: 0; }
+
+#area4 {
+  background-image: url("../img/bgimg4.jpg"); }
+
+.survise {
+  margin-bottom: 60px; }
+  .survise .inner .areas {
+    height: 386px;
+    margin-bottom: 60px;
+    background: no-repeat 50% 0/ cover; }
+    .survise .inner .areas .text {
+      float: right;
+      padding-right: 30px;
+      width: 400px; }
+      .survise .inner .areas .text .in {
+        padding: 55px 50px; }
+        .survise .inner .areas .text .in h3 {
+          font-size: 1.6rem;
+          letter-spacing: 3px;
+          font-weight: 500;
+          margin-bottom: 30px; }
+        .survise .inner .areas .text .in p {
+          line-height: 1.9;
+          margin-bottom: 50px;
+          color: #383737;
+          font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+          font-weight: normal;
+          letter-spacing: 1px; }
+        .survise .inner .areas .text .in .btn-wrap {
+          text-align: right; }
+
+.survise .inner .revers {
+  background-position: 50% 100%; }
+  .survise .inner .revers .text {
+    padding-left: 90px;
+    float: left; }
+
+.blog {
+  background-color: #ebeff8;
+  padding: 60px;
+  margin-bottom: 80px; }
+  .blog .inner {
+    width: 940px;
+    margin: 0 auto; }
+    .blog .inner .blog-list {
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: space-between; }
+      .blog .inner .blog-list li {
+        width: 310px;
+        height: 310px;
+        background-color: #fff;
+        overflow: hidden; }
+        .blog .inner .blog-list li .img-wra {
+          width: 100%;
+          height: 100%;
+          position: relative; }
+          .blog .inner .blog-list li .img-wra img {
+            display: block;
+            object-fit: cover;
+            height: 100%; }
+          .blog .inner .blog-list li .img-wra .category {
+            font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+            display: inline-block;
+            font-size: 12px;
+            padding: 9px;
+            letter-spacing: 1px;
+            position: absolute;
+            left: 0;
+            top: 0; }
+          .blog .inner .blog-list li .img-wra .text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+            color: #fff;
+            padding: 10px;
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.58) 20%, rgba(0, 0, 0, 0) 100%); }
+            .blog .inner .blog-list li .img-wra .text time {
+              display: inline-block;
+              font-size: 12px;
+              margin-right: 0.7em;
+              letter-spacing: 1px; }
+            .blog .inner .blog-list li .img-wra .text h3 {
+              margin: 8px 0;
+              line-height: 1;
+              height: 1em;
+              letter-spacing: 1px;
+              overflow: hidden; }
+    .blog .inner .btn-wrap {
+      margin-top: 30px;
+      text-align: center; }
+
+/*.blog {
+	background-color: $bg-blue2;
+	padding: 60px;
+	margin-bottom: 80px;
+	.inner {
+		width: 940px;
+		@include box-center;
+		
+		.blog-list {
+			margin-bottom: 50px;
+			
+			
+			li {
+				width: 29.5%;
+				background-color: #fff;
+				border-radius: 5px;
+				overflow: hidden;
+
+				.img-wra {
+					
+					width: 100%;
+					height: 175px;
+
+				
+					img {
+						display: block;
+						object-fit: cover;
+						height: 100%;
+					}
+					
+				}
+				
+				div {
+					font-family: $gosic;
+					padding: 10px;
+				
+				time {
+					display: inline-block;
+					font-size: 12px;
+					margin-right: 0.7em;
+					color: #454242;
+					letter-spacing: 1px;
+
+				}
+				
+				.category {
+					display: inline-block;
+					font-size: 10px;
+					padding: 4px;
+					
+				}
+				
+				h3 {
+					margin: 8px 0;
+					line-height: 1;
+					height: 1em;
+					overflow: hidden;
+
+				}
+			  }
+			}
+		}
+		
+		.btn-wrap {
+			margin-top: 30px;
+			text-align: center;
+		}
+	}
+}*/
+.slider {
+  opacity: 0;
+  transform: 3s; }
+
+.slick-initialized {
+  opacity: 1; }
+
+/*plof */
+.plof .inner {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 60px; }
+  .plof .inner .plof-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px; }
+    .plof .inner .plof-top .left {
+      width: 45%; }
+      .plof .inner .plof-top .left h2 {
+        font-size: 2.9rem;
+        margin-bottom: 20px;
+        letter-spacing: .3rem;
+        font-family: a-otf-ryumin-pr6n,serif;
+        font-weight: 300;
+        font-style: normal; }
+        .plof .inner .plof-top .left h2 span {
+          display: block;
+          margin-bottom: 10px;
+          font-size: 1.0rem;
+          color: #666;
+          letter-spacing: 2px; }
+      .plof .inner .plof-top .left p {
+        color: #666;
+        line-height: 1.7; }
+    .plof .inner .plof-top .right {
+      width: 45%; }
+  .plof .inner .plof-bm {
+    display: flex;
+    justify-content: space-between; }
+    .plof .inner .plof-bm .lr {
+      color: #686868;
+      letter-spacing: 1px;
+      width: 48%;
+      font-size: 1.1rem; }
+      .plof .inner .plof-bm .lr h3 {
+        font-size: 1.3rem;
+        margin-bottom: .8rem;
+        color: #000;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #686868;
+        letter-spacing: 1px; }
+      .plof .inner .plof-bm .lr ul li {
+        margin-bottom: 15px; }
+        .plof .inner .plof-bm .lr ul li span {
+          display: inline-block;
+          margin-right: 1rem; }
+
+.price .inner {
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 60px; }
+  .price .inner h2 {
+    text-align: center; }
+  .price .inner dl {
+    display: table;
+    width: 100%; }
+    .price .inner dl dt, .price .inner dl dd {
+      display: table-cell;
+      width: 50%;
+      padding: 18px 25px;
+      font-size: 1.32rem;
+      font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+      color: #333333; }
+    .price .inner dl dd {
+      text-align: right; }
+    .price .inner dl:nth-of-type(1) {
+      border-top: 1px solid #ccc; }
+    .price .inner dl:nth-of-type(even) {
+      background-color: #f8f8f8; }
+
+.access {
+  width: 100%;
+  margin-bottom: 80px; }
+  .access .inner {
+    display: flex;
+    height: 380px; }
+    .access .inner .map {
+      width: 67%; }
+    .access .inner .text {
+      width: 33%;
+      height: 100%;
+      text-align: center;
+      background-color: #ebeff8;
+      font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif; }
+      .access .inner .text .in {
+        margin-top: 32px;
+        padding: 60px; }
+        .access .inner .text .in p {
+          font-size: 1.27rem;
+          line-height: 1.7;
+          color: #2B2B2B;
+          letter-spacing: 1px;
+          margin-bottom: 62px; }
+
+.contact-top {
+  background: url("../img/bg3.jpg") no-repeat 50% 50%;
+  margin-bottom: 80px; }
+  .contact-top .inner {
+    padding: 60px;
+    width: 860px;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+    letter-spacing: 1px; }
+    .contact-top .inner h2 {
+      margin-bottom: 30px;
+      font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", serif;
+      font-size: 2.2rem;
+      letter-spacing: 3px; }
+    .contact-top .inner p {
+      margin-bottom: 30px;
+      line-height: 1.6;
+      letter-spacing: 2px;
+      font-size: 1.1rem; }
+    .contact-top .inner .c-btnwra {
+      margin-top: 54px; }
+
+.contact {
+  width: 100%;
+  margin-bottom: 60px; }
+  .contact .inner {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center; }
+    .contact .inner h2 {
+      margin-bottom: 13px;
+      font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", serif;
+      font-size: 1.3rem;
+      letter-spacing: 3px; }
+    .contact .inner p {
+      margin-bottom: 7.3rem;
+      line-height: 1.6;
+      letter-spacing: 1px;
+      font-size: 1.0rem;
+      color: #333;
+      font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif; }
+    .contact .inner .tel {
+      font-size: 2.1rem;
+      display: block;
+      letter-spacing: .1rem;
+      margin-bottom: 1.2rem; }
+
+.form {
+  margin-top: 2.4rem; }
+  .form .in p {
+    font-size: 1.8rem;
+    margin-bottom: 2.9rem;
+    color: #000; }
+  .form .in dl {
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    margin-bottom: 45px;
+    font-family: "ヒラギノ角ゴ W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif"; }
+    .form .in dl dt {
+      display: table-cell;
+      width: 159px;
+      text-align: left; }
+    .form .in dl dd {
+      display: table-cell;
+      width: 400px;
+      text-align: left; }
+      .form .in dl dd input, .form .in dl dd textarea {
+        background-color: #f8f8f8;
+        border-radius: 4px;
+        padding: 8px 10px;
+        width: 100%; }
+      .form .in dl dd div {
+        margin-bottom: 10px; }
+        .form .in dl dd div .check {
+          width: auto;
+          text-align: left;
+          vertical-align: middle;
+          margin-right: .4rem;
+          height: 1.2rem;
+          width: 1.2rem; }
+        .form .in dl dd div span {
+          vertical-align: middle; }
+      .form .in dl dd textarea {
+        height: 300px;
+        overflow-y: scroll; }
+    .form .in dl:last-of-type {
+      margin-bottom: 47px; }
+      .form .in dl:last-of-type dt {
+        vertical-align: top; }
+  .form .in .send {
+    background-color: #0f388c;
+    position: relative;
+    width: 260px;
+    margin: 0 auto; }
+    .form .in .send::after {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: 58%;
+      transform: translateY(-50%);
+      background: url("../img/arrow.png") no-repeat;
+      display: inline-block;
+      height: 20px;
+      width: 40px;
+      background-size: 26px; }
+    .form .in .send .send-in {
+      background-color: #0f388c;
+      color: #fff;
+      height: 60px;
+      line-height: 60px;
+      letter-spacing: 1px;
+      font-size: 1.1rem; }
+
+footer {
+  background-color: #0f388c; }
+  footer .footer-cont {
+    width: 900px;
+    margin: 0 auto; }
+    footer .footer-cont .copy {
+      font-size: 10px;
+      padding: 5px 0;
+      color: #fff;
+      text-align: center;
+      font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif; }
+
+@media only screen and (max-width: 768px) {
+  header {
+    border-bottom: 1px solid #0f388c; }
+    header .header-center {
+      width: 96%;
+      margin: 0 auto;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      header .header-center .logo {
+        text-align: left;
+        width: 160px;
+        margin: 0; }
+      header .header-center .sptel {
+        width: 146px;
+        text-align: right;
+        border-radius: 3px; }
+
+  .main-img {
+    position: relative; }
+    .main-img h2 {
+      font-size: 1.02rem;
+      line-height: 1.74;
+      letter-spacing: 2px;
+      color: #fff;
+      font-family: a-otf-ryumin-pr6n,serif;
+      font-weight: 300;
+      font-style: normal;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 120px;
+      width: 100%;
+      text-align: center;
+      text-shadow: 0px 2px 11.28px rgba(0, 0, 0, 0.4); }
+      .main-img h2 .large {
+        font-size: 1.6rem;
+        line-height: 1.5; }
+
+  .cach-area {
+    width: 100%;
+    background: url("../img/bg.jpg") no-repeat 50% 50%;
+    background-size: cover;
+    margin-bottom: 80px; }
+    .cach-area .inner {
+      width: 100%;
+      padding: 40px 0;
+      margin: 0 auto; }
+      .cach-area .inner h2 {
+        width: 96%;
+        margin: 0 auto;
+        font-size: 1.19rem;
+        margin-bottom: 30px;
+        line-height: 1.7; }
+      .cach-area .inner p {
+        line-height: 1.9;
+        padding: 0 10%;
+        margin-bottom: 40px;
+        font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+        color: #fff;
+        font-size: .9rem; }
+      .cach-area .inner .btn-wra {
+        text-align: center; }
+
+  #area1, #area2, #area3, #area4 {
+    background: none; }
+
+  .survise {
+    margin-bottom: 70px; }
+    .survise .inner .areas {
+      height: auto;
+      margin-bottom: 60px;
+      background: none; }
+      .survise .inner .areas .text {
+        float: none;
+        padding-right: 0px;
+        width: 92%;
+        margin: 0 auto; }
+        .survise .inner .areas .text .in {
+          padding: 10px 0; }
+          .survise .inner .areas .text .in h3 {
+            font-size: 1.45rem;
+            letter-spacing: 3px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            line-height: 1.0; }
+          .survise .inner .areas .text .in p {
+            line-height: 1.5;
+            margin-bottom: 25px;
+            color: #383737;
+            font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+            font-weight: normal;
+            letter-spacing: 1px;
+            font-size: 12px; }
+          .survise .inner .areas .text .in .btn-wrap {
+            text-align: center; }
+
+  .survise .inner .revers {
+    background-position: 50% 100%; }
+    .survise .inner .revers .text {
+      padding-left: 0px;
+      float: none; }
+
+  .blog {
+    padding: 60px 0; }
+    .blog .inner {
+      width: 96%;
+      margin: 0 auto; }
+      .blog .inner .blog-list {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column; }
+        .blog .inner .blog-list li {
+          width: 100%;
+          height: 260px;
+          background-color: #fff;
+          border-radius: 5px;
+          overflow: hidden; }
+          .blog .inner .blog-list li .img-wra {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 8px; }
+            .blog .inner .blog-list li .img-wra img {
+              display: block;
+              object-fit: cover;
+              height: 100%;
+              margin-bottom: 20px; }
+          .blog .inner .blog-list li div {
+            padding: 10px; }
+            .blog .inner .blog-list li div time {
+              display: inline-block;
+              width: 60px;
+              margin-right: 1em; }
+            .blog .inner .blog-list li div .category {
+              display: inline-block; }
+            .blog .inner .blog-list li div h3 {
+              margin: 8px 0; }
+      .blog .inner .btn-wrap {
+        margin-top: 30px;
+        text-align: center; }
+
+  .access {
+    width: 100%;
+    margin-bottom: 80px; }
+    .access .inner {
+      flex-flow: column; }
+      .access .inner .map {
+        width: 100%;
+        height: 360px; }
+      .access .inner .text {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background-color: #ebeff8; }
+        .access .inner .text .in {
+          padding-top: 30px;
+          padding-bottom: 60px; }
+          .access .inner .text .in p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            margin-bottom: 30px; }
+
+  /*.contact-top {
+  	margin-bottom: 80px;
+  	.inner {
+  		padding: 60px 0;
+  		width: 90%;
+  		text-align: center;
+  		@include box-center;
+  		color: #fff;
+  		font-family: $gosic;
+  		
+  		h2 {
+  			margin-bottom: 40px;
+  			font-family: $minchio;
+  			font-size: 2.2rem;
+  			letter-spacing: 3px;
+  		}
+  		
+  		p {
+  			margin-bottom: 17px;
+  			line-height: 1.6;
+  			letter-spacing: 1px;
+  			font-size: 13px;
+  		}
+  		
+  		.c-btnwra {
+  			margin-top: 54px;
+  		} 
+  	}
+  }*/
+  .contact {
+    width: 100%;
+    margin-bottom: 60px; }
+    .contact .inner {
+      width: 96%; }
+      .contact .inner h2 {
+        margin-bottom: 30px;
+        font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "Yu Mincho Light", "YuMincho", "Yu Mincho", "游明朝体", serif;
+        font-size: 1.7rem;
+        letter-spacing: 3px; }
+      .contact .inner p {
+        margin-bottom: 30px;
+        line-height: 1.6;
+        letter-spacing: 2px;
+        font-size: 1.1rem; }
+
+  .form {
+    margin-top: 50px; }
+    .form .in dl {
+      display: block;
+      width: 100%;
+      vertical-align: middle;
+      margin-bottom: 20px; }
+      .form .in dl dt {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px; }
+      .form .in dl dd {
+        display: block;
+        width: 100%; }
+        .form .in dl dd textarea {
+          height: 270px;
+          overflow-y: scroll; }
+
+  footer {
+    background-color: #ebeff8;
+    padding: 40px 0 120px; }
+    footer .footer-cont {
+      width: 96%;
+      margin: 0 auto; }
+      footer .footer-cont p {
+        text-align: center; }
+      footer .footer-cont .f-logo {
+        width: 80%;
+        min-width: 220px;
+        margin: 0 auto;
+        margin-bottom: 30px; }
+      footer .footer-cont .footer-navi {
+        text-align: center;
+        margin-bottom: 25px; }
+        footer .footer-cont .footer-navi li {
+          display: inline-block;
+          font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif;
+          font-size: 0.8rem;
+          padding-right: 25px;
+          letter-spacing: 1px; }
+          footer .footer-cont .footer-navi li:last-child {
+            padding-right: 0; }
+          footer .footer-cont .footer-navi li a {
+            display: block;
+            color: #222222; }
+      footer .footer-cont .copy {
+        font-size: 10px;
+        padding-bottom: 10px; }
+
+  .hander {
+    position: fixed;
+    right: 5px;
+    bottom: 120px;
+    z-index: 9999; }
+    .hander .hanber-in {
+      position: relative;
+      display: block;
+      width: 60px;
+      background-color: #0f388c;
+      height: 60px;
+      border-radius: 50%; }
+      .hander .hanber-in::after {
+        content: "menu";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5px;
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 1px;
+        font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif; }
+      .hander .hanber-in span {
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        width: 28px;
+        height: 2px;
+        display: block;
+        background-color: #fff;
+        transition: .35s ease-in;
+        transform: translateX(-50%); }
+
+  .hander .hanber-in span::after,
+  .hander .hanber-in span::before {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    height: 2px;
+    width: 28px;
+    transition: .35s ease-in;
+    display: block; }
+
+  .hander .hanber-in span::after {
+    top: -10px;
+    transform: rotate(0deg); }
+
+  .hander .hanber-in span::before {
+    top: 10px;
+    transform: rotate(0deg); }
+
+  .open .hanber-in {
+    background-color: #fff; }
+    .open .hanber-in::after {
+      content: "colse";
+      color: #0f388c; }
+
+  .open .hanber-in span {
+    background: none;
+    /*   background-color:rgba(65,155,205,1.00);*/ }
+
+  .open .hanber-in span::after,
+  .open .hanber-in span::before {
+    background-color: #0f388c; }
+
+  .open .hanber-in span::after {
+    transform: rotate(45deg);
+    top: 0; }
+
+  .open .hanber-in span:before {
+    top: 0;
+    transform: rotate(-45deg); }
+
+  nav ul.dw-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(15, 56, 140, 0.7);
+    display: none;
+    padding-top: 45%;
+    z-index: 5000; }
+    nav ul.dw-menu li {
+      text-align: center;
+      font-size: 1.2rem;
+      display: block;
+      margin: 20px 25%; }
+      nav ul.dw-menu li a {
+        border-bottom: 1px solid #fff;
+        display: block;
+        padding: 10px 0;
+        color: #fff; }
+
+  .fix-btm {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); }
+    .fix-btm .inner {
+      padding: 12px 0; }
+      .fix-btm .inner ul {
+        display: flex;
+        justify-content: center; }
+        .fix-btm .inner ul li {
+          width: 46%;
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          background-color: #0f388c;
+          letter-spacing: 1px; }
+          .fix-btm .inner ul li:first-child {
+            margin-right: 1%; }
+          .fix-btm .inner ul li:last-child {
+            margin-left: 1%; }
+          .fix-btm .inner ul li a {
+            color: #fff;
+            display: block;
+            position: relative;
+            font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", "メイリオ", Meiryo, sans-serif; }
+            .fix-btm .inner ul li a::before {
+              content: "";
+              display: inline-block;
+              height: 16px;
+              width: 34px;
+              background: no-repeat;
+              background-size: 16px;
+              background-image: url("../img/tel.png");
+              position: absolute;
+              left: 8px;
+              top: 50%;
+              transform: translateY(-50%); }
+            .fix-btm .inner ul li a::after {
+              content: "";
+              position: absolute;
+              background: url("../img/arrow.png") no-repeat 0% 50%;
+              background-repeat: no-repeat;
+              right: 8px;
+              top: 50%;
+              transform: translateY(-50%);
+              display: inline-block;
+              height: 20px;
+              width: 14px;
+              background-size: 14px; }
+
+  a#mail {
+    background-color: #2db57a; }
+    a#mail::before {
+      background-image: url("../img/icon_mail.png");
+      height: 10px;
+      background-size: 15px; } }
+/*記事本文スタイル*/
+.main {
+  width: 1140px;
+  margin: 0 auto; }
+
+.wp-cont {
+  float: left; }
+  .wp-cont .wp-in {
+    clear: both; }
+    .wp-cont .wp-in h1 {
+      font-size: 2.0rem;
+      line-height: 1.75;
+      font-weight: 600;
+      /* margin-top: 40px;*/
+      margin-bottom: 40px; }
+    .wp-cont .wp-in .category-area {
+      background-color: none;
+      background-image: none;
+      text-align: left;
+      padding: 0;
+      display: block;
+      margin-bottom: 40px; }
+      .wp-cont .wp-in .category-area ul li {
+        display: inline-block;
+        background-color: #f3f3f3;
+        margin-right: 1%; }
+        .wp-cont .wp-in .category-area ul li a {
+          padding: 5px 7px;
+          display: block;
+          color: #222222; }
+    .wp-cont .wp-in .time {
+      font-size: 12px;
+      letter-spacing: 1px; }
+    .wp-cont .wp-in .wp-in h1 {
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 40px;
+      border-bottom: 1px solid #454545;
+      margin-bottom: 20px; }
+    .wp-cont .wp-in .wp-in h2 {
+      border-bottom: solid 1px #ccc;
+      background: none;
+      color: #000;
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 15px 0;
+      padding-bottom: 18px;
+      margin-bottom: 20px; }
+    .wp-cont .wp-in .wp-in p {
+      margin-bottom: 18px;
+      line-height: 2.2;
+      font-size: 0.94rem;
+      letter-spacing: 0.1rem;
+      color: #303030; }
