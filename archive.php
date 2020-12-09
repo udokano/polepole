@@ -5,43 +5,43 @@
 
 
   <?php if( is_year() ) : ?>
-
-        <?php if(get_field('years_archive_header_img',9033)): ?>
+<!-- 本番ではID 9068 ローカル 9033 -->
+        <?php if(get_field('years_archive_header_img',9068)): ?>
 
         <div class="page-head" id="js-mt-spaece">
             <div class="page-head__img">
               <div class="page-head__img-inner">
-                    <img src="<?php the_field('years_archive_header_img',9033); ?>" alt="<?php the_field('years_archive_header_text'); ?>">
+                    <img src="<?php the_field('years_archive_header_img',9068); ?>" alt="<?php the_field('years_archive_header_text'); ?>">
               </div>
             </div>
 
             <div class="page-head__inner">
               <h1 class="page-head__ttl">
-              <?php the_field('years_archive_header_text',9033); ?>
+              <?php the_field('years_archive_header_text',9068); ?>
               </h1>
             </div>
         </div>
 
       <?php else: ?>
         <h1 class="page-head-no-img">
-            <span class="page-head-no-img__text"><?php the_field('years_archive_header_text',9033); ?></span>
+            <span class="page-head-no-img__text"><?php the_field('years_archive_header_text',9068); ?></span>
         </h1>
       <?php endif; ?>
 
    <?php elseif( is_category() ) : ?>
 
-         <?php if(get_field('category_archive_header_img',9033)): ?>
+         <?php if(get_field('category_archive_header_img',9068)): ?>
 
         <div class="page-head" id="js-mt-spaece">
             <div class="page-head__img">
               <div class="page-head__img-inner">
-                    <img src="<?php the_field('category_archive_header_img',9033); ?>" alt="<?php the_field('category_archive_header_text'); ?>">
+                    <img src="<?php the_field('category_archive_header_img',9068); ?>" alt="<?php the_field('category_archive_header_text'); ?>">
               </div>
             </div>
 
             <div class="page-head__inner">
               <h1 class="page-head__ttl">
-              <?php the_field('category_archive_header_text',9033); ?>
+              <?php the_field('category_archive_header_text',9068); ?>
               </h1>
             </div>
         </div>
