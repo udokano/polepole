@@ -232,6 +232,40 @@ html {
   width: 100%;
 }
 
+/* 記事一覧へのボタン */
+.c-btn-toList {
+  background-color: #f5a94c;
+  color: #ffffff;
+  display: block;
+  font-size: 1.02rem;
+  height: 55px;
+  line-height: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  width: 240px;
+}
+
+@media (max-width: 767px) {
+  .c-btn-toList {
+    font-size: 1.4rem;
+  }
+}
+
+.c-btn-toList::after {
+  -webkit-transform: translateY(-50%);
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid white;
+  border-top: 8px solid transparent;
+  content: '';
+  display: inline-block;
+  left: 27px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .pc-display {
   display: block !important;
 }

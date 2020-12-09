@@ -154,9 +154,9 @@ Template Name: フロントページ
     				// メインクエリの投稿データに戻す
     		wp_reset_postdata(); ?>
 
-					<div id="more_mobail" class="">
-						<a href="<?php echo home_url('/'); ?>news">一覧へ</a>
-					</div>
+
+						<a href="<?php echo home_url('/'); ?>news" class="c-btn-toList">一覧へ</a>
+
 				</section>
 
 

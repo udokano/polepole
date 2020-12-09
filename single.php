@@ -144,7 +144,7 @@ location.href="<?php the_field('anthor_link'); ?>";
         ?>
         <?php } ?>
       </div>
-      <div id="more_mobail"> <a href="<?php echo home_url(); ?>news">一覧へ</a> </div>
+      <a href="<?php echo home_url('/'); ?>news" class="c-btn-toList">一覧へ</a>
     </article>
   </section>
   <?php  endif; ?>
