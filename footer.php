@@ -1,4 +1,5 @@
-                  <?php if (have_rows('top_banner',7578)): ?>
+
+    <?php if (have_rows('top_banner',7578)): ?>
 				<aside class="bannerArea">
 
 				<ul class="bannerArea__list">
@@ -17,28 +18,17 @@
 					</ul>
 					</aside>
 					<?php else: ?>
-			<?php endif; ?>
+		<?php endif; ?>
 
 
 
-<footer>
-
-  <div class="footerInner">
-
-  </div>
-  <!-- フッターインナー終了!-->
-
-
-
-  <div id="copy">
-    <p id="copyRight"><small>※当サイトに掲載している、記事、写真等の無断転用を禁止します。<br>
+<footer class="p-footer">
+    <p class="p-footer__copy"><small>※当サイトに掲載している、記事、写真等の無断転用を禁止します。<br>
       Copyright&copy;タンザニア・ポレポレクラブ All Rights Reserved.</small>
     </p>
-  </div>
-
 </footer>
 
-    <div id="pagetop"><span class="top_triangle"></span></div><!--ページトップボタン-->
+
 
 
 </div><!-- ラッパー終了 !-->

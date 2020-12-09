@@ -1234,6 +1234,17 @@ footer {
   width: 0;
 }
 
+.p-footer {
+  background-color: #545454;
+  padding: .78rem 0;
+}
+
+.p-footer__copy {
+  font-size: .58rem;
+  line-height: 1.23;
+  text-align: center;
+}
+
 .key_visual {
   height: 62vw;
   width: 100%;
