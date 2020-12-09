@@ -13,7 +13,13 @@ Template Name: フロントページ
 			<ul class="key_visual__slides cf" id="js-slide">
 			<?php while (have_rows('top__slide',7578)) : the_row(); ?>
 			<li class="key_visual__item">
-				   <a href="<?php the_sub_field('slide__link',7578);?>" class="key_visual__link" <?php the_sub_field('new_window',7578); ?>>
+<a href="<?php $link_type = get_sub_field( 'rd_select' ,7578); ?>
+<?php if(get_sub_field("slide__link_select",7578) && $link_type === "select"): ?>
+<?php the_sub_field('slide__link_select',7578);?>
+<?php endif; ?>
+<?php if(get_sub_field("slide__link",7578) && $link_type === "input"): ?>
+<?php the_sub_field('slide__link',7578);?>
+<?php endif; ?>" class="key_visual__link" <?php the_sub_field('new_window',7578); ?>>
 					 <img data-lazy="<?php the_sub_field('slide_img',7578);?>" alt="PCスライド３" class="pc-display"/>
 					 <img data-lazy="<?php the_sub_field('slide_img_sp',7578);?>" alt="SPスライド3" class="sp-display"/>
 
@@ -123,10 +129,10 @@ Template Name: フロントページ
 							　<?php endif; ?>
 						  </div>
 						  <div class="newsText">
-						
+
 							 <!-- カテゴリーの取得の関数が長いので、別ファイル -->
                     				<?php get_template_part('inc__category-list'); ?>
-							  
+
 							<!--投稿日を表示-->
 							  <span class="kiji-date">
 								<time datetime="<?php echo get_the_date( 'Y/m/d' ); ?>">
@@ -155,7 +161,7 @@ Template Name: フロントページ
 	</div><!-- コンテンツ終了 !-->
 
 
-	
+
 
 
 
