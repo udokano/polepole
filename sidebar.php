@@ -46,6 +46,29 @@
 <?php endif; ?>
  -->
 
+
+ <!-- 寄付のスライドを新たに追加 -->
+
+
+    <?php if (have_rows('dn_slide_area',7578)): ?>
+    <ul class="p-dn-slide" id="js-dn-slide">
+      <?php while (have_rows('dn_slide_area',7578)) : the_row(); ?>
+
+        <li class="p-dn-slide__item">
+            <a href="<?php the_sub_field('dn_slide_link',7578); ?>" target="_blank" class="p-dn-slide__link">
+                <div class="p-dn-slide__img">
+                    <img src="<?php the_sub_field('dn_slide_img',7578); ?>" alt="<?php the_sub_field('dn_slide_text',7578); ?>">
+                </div>
+                <p class="p-dn-slide__ttl"><?php the_sub_field('dn_slide_text',7578); ?></p>
+            </a>
+        </li>
+
+      <?php endwhile; ?>
+    </ul>
+<?php else: ?>
+<?php endif; ?>
+
+
 <!-- <ul class="list-wrappre">
 <li class="list-wrappre__ttl side_slide_subject">カテゴリー</li>
 <?php wp_list_categories('title_li='); ?>
@@ -84,6 +107,29 @@
             <?php echo '</select>'; ?>
             </li>
         </ul>
+
+ <!-- 寄付のスライドを新たに追加 -->
+
+
+    <?php if (have_rows('dn_slide_area',7578)): ?>
+    <ul class="p-dn-slide" id="js-dn-slide">
+      <?php while (have_rows('dn_slide_area',7578)) : the_row(); ?>
+
+        <li class="p-dn-slide__item">
+            <a href="<?php the_sub_field('dn_slide_link',7578); ?>" target="_blank" class="p-dn-slide__link">
+                <div class="p-dn-slide__img">
+                    <img src="<?php the_sub_field('dn_slide_img',7578); ?>" alt="<?php the_sub_field('dn_slide_text',7578); ?>">
+                </div>
+                <p class="p-dn-slide__ttl"><?php the_sub_field('dn_slide_text',7578); ?></p>
+            </a>
+        </li>
+
+      <?php endwhile; ?>
+    </ul>
+<?php else: ?>
+<?php endif; ?>
+    </div>
+    <!-- ./page-list -->
 </aside>
 
 

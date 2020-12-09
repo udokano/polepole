@@ -10,7 +10,7 @@ $('document').ready(function () {
   } else {
   }
 
-  //slickスライド
+  //slickスライドTOPページ
 
   $('#js-slide').slick({
     //{}を入れる
@@ -26,9 +26,27 @@ $('document').ready(function () {
     pauseOnHover: false,
     prevArrow: "<div class='slide-arrow arrow-prev'></div>",
     nextArrow: "<div class='slide-arrow arrow-next'></div>"
-  })
+  });
 
-  /* 
+
+  //slickスライドTOPページ
+
+  $('#js-dn-slide').slick({
+    //{}を入れる
+    autoplay: true, //「オプション名: 値」の形式で書く
+    focusOnSelect: true,
+    dots: false, //複数書く場合は「,」でつなぐ
+    //fade: true,
+    arrows: false,
+    autoplaySpeed: 4000,
+    speed: 1000,
+    lazyLoad: 'progressive',
+    pauseOnFocus: false,
+    pauseOnHover: false
+  });
+
+
+  /*
   $(".js-nav-child").mouseover(function(){
 	$(this).next(".mega-menu").addClass("is-maga-show");
   });
@@ -96,7 +114,7 @@ $('document').ready(function () {
   })
 
   //アンカーリンク
-  /* 
+  /*
   var navHight = $ ('#js-gnav').outerHeight ();
 
 

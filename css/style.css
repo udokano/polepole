@@ -725,6 +725,44 @@ html {
   }
 }
 
+.p-breadcrumb {
+  margin: 1.55rem 0;
+}
+
+.p-breadcrumb__lists {
+  margin: 0 auto;
+  max-width: 1150px;
+  width: 90%;
+}
+
+.p-breadcrumb__item {
+  display: inline-block;
+  margin-right: .7rem;
+  padding-right: .8rem;
+  position: relative;
+}
+
+.p-breadcrumb__item::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  border-bottom: 1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  content: "";
+  height: .38rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  width: .38rem;
+}
+
+.p-breadcrumb__item:last-of-type::after {
+  display: none;
+}
+
+.p-breadcrumb__item a {
+  color: #6a6a6a;
+}
+
 .content_area {
   font-size: 1rem;
   font-weight: normal;
@@ -2049,7 +2087,7 @@ button.btn_menu span.bar {
   position: absolute;
   right: 15%;
   top: 0;
-  width: 45%;
+  width: 38%;
 }
 
 .page-head__img img {
@@ -2585,6 +2623,52 @@ button.btn_menu span.bar {
   margin: 1.32rem 0;
   padding: .98rem 1.22rem;
   width: 100%;
+}
+
+/*
+
+寄付のスライド
+----------------------------*/
+.p-dn-slide {
+  margin: 1.88rem 0;
+}
+
+@media (max-width: 767px) {
+  .p-dn-slide {
+    margin: 2.55rem 0;
+  }
+}
+
+.p-dn-slide__img {
+  height: 10.5rem;
+  margin-bottom: 1.22rem;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .p-dn-slide__img {
+    height: 24.5rem;
+  }
+}
+
+.p-dn-slide__img img {
+  -o-object-fit: cover;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.p-dn-slide__ttl {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.24;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .p-dn-slide__ttl {
+    font-size: 1.45rem;
+  }
 }
 
 /*singleページタイトル周り*/

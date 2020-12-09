@@ -1,0 +1,38 @@
+.p-breadcrumb {
+    margin: 1.55rem 0;
+
+    &__lists {
+        max-width: 1150px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: inline-block;
+        padding-right: .8rem;
+        margin-right: .7rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: .38rem;
+            height: .38rem;
+            right: 0;
+            top: 50%;
+            border-right: 1px solid #d7d7d7;
+            border-bottom: 1px solid #d7d7d7;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
+            }
+        }
+
+        a {
+            color: #6a6a6a;
+        }
+    }
+}

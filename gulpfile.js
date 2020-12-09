@@ -37,7 +37,7 @@ gulp.task('sass', function () {
 // 保存時のリロード
 gulp.task('browser-sync', function (done) {
     const browserSyncOption = {
-        proxy: "http://localhost:10003/"
+        proxy: "http://polepole.local/"
     }
     browserSync.init(browserSyncOption)
     done()
