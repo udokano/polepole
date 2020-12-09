@@ -9,8 +9,8 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?<?php echo filemtime( get_stylesheet_directory() . '/css/style.css'); ?>">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tablet.css?aa">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/smart.css?aaaa">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tablet.css?aaaa">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/smart.css?aaaaaa">
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/img/favicon/favicon-16x16.png">
