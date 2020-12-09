@@ -1,5 +1,9 @@
 .p-breadcrumb {
-    margin: 1.55rem 0;
+    margin: 2.55rem 0;
+
+    @media (max-width: 767px) {
+        margin: 1.62rem 0;
+    }
 
     &__lists {
         max-width: 1150px;
@@ -12,6 +16,7 @@
         padding-right: .8rem;
         margin-right: .7rem;
         position: relative;
+        line-height: 1;
 
         &::after {
             content: "";
@@ -33,6 +38,7 @@
 
         a {
             color: #6a6a6a;
+            line-height: 1;
         }
     }
 }

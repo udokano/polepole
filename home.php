@@ -113,37 +113,40 @@ Template Name: フロントページ
 					// カスタムクエリの投稿データをセット
 					$the_query->the_post();?>
 
-				<article <?php post_class( 'newsTopic' ); ?>>
+				<article class="p-top-archive">
 				<?php if(get_field('anthor_link')): ?>
-						<a href="<?php the_field("anthor_link"); ?>" target="_blank">
+						<a href="<?php the_field("anthor_link"); ?>" class="p-top-archive__link" target="_blank">
 				<?php else: ?>
-						<a href="<?php the_permalink(); ?>">
+						<a href="<?php the_permalink(); ?>" class="p-top-archive__link">
 						<?php endif; ?>
 										<!--画像を追加-->
-						  <div class="thumbnail-wrap">
+						  <div class="p-top-archive__thumb">
 							<?php if( has_post_thumbnail() ): ?>
-							<?php the_post_thumbnail('thumb300'); ?>
-
+							<?php the_post_thumbnail('full'); ?>
 							　<?php else: ?>
-								<img src="<?php echo get_template_directory_uri(); ?>/img/no-image.gif" alt="no-img"/>
+								<img src="<?php echo get_template_directory_uri(); ?>/img/no-image.gif" alt="no-img">
 							　<?php endif; ?>
 						  </div>
-						  <div class="newsText">
+						  <!-- ./thumb -->
+						  <div class="p-top-archive__right">
 
-							 <!-- カテゴリーの取得の関数が長いので、別ファイル -->
-                    				<?php get_template_part('inc__category-list'); ?>
-
-							<!--投稿日を表示-->
-							  <span class="kiji-date">
+						  	<!--投稿日を表示-->
+							  <p class="p-top-archive__date">
 								<time datetime="<?php echo get_the_date( 'Y/m/d' ); ?>">
 									<?php the_time('Y/m/d'); ?>
 								</time>
-							  </span>
+							  </p>
+
+							 <!-- カテゴリーの取得の関数が長いので、別ファイル -->
+							 	<div class="p-top-archive__cat">
+								 	<?php get_template_part('inc__category-list'); ?>
+								 </div>
 
 							<!--タイトル-->
-							  <h3><?php the_title(); ?></h3>
+							  <h3 class="p-top-archive__ttl"><?php the_title(); ?></h3>
 						    </div>
 						</a>
+						<!-- ./right -->
 				 </article>
 
     		<?php endwhile;

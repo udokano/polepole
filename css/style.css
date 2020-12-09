@@ -309,7 +309,7 @@ html {
   -webkit-box-pack: justify;
   color: #454545;
   /*  display: table;
-    table-layout: fixed; */
+      table-layout: fixed; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +325,7 @@ html {
 .thumbnail-wrap,
 .newsText {
   /* display: table-cell;
-    vertical-align: top; */
+      vertical-align: top; */
 }
 
 .thumbnail-wrap {
@@ -485,6 +485,89 @@ html {
     font-size: 1.22rem;
     line-height: 1.25;
     margin-top: 1.28rem;
+  }
+}
+
+/*
+
+TOPアーカイブ新たに書く
+--------------------------*/
+.p-top-archive {
+  border-bottom: 1px dotted #e1e1e1;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.p-top-archive__link {
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .p-top-archive__link {
+    display: block;
+  }
+}
+
+.p-top-archive__thumb {
+  height: 190px;
+  width: 33%;
+}
+
+@media (max-width: 767px) {
+  .p-top-archive__thumb {
+    height: 53vw;
+    margin-bottom: 1.88rem;
+    width: 100%;
+  }
+}
+
+.p-top-archive__thumb img {
+  -o-object-fit: cover;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.p-top-archive__right {
+  color: #333;
+  width: 62%;
+}
+
+@media (max-width: 767px) {
+  .p-top-archive__right {
+    width: 100%;
+  }
+}
+
+.p-top-archive__date {
+  color: #c4c4c4;
+  margin-bottom: .38rem;
+}
+
+.p-top-archive__cat {
+  margin-bottom: .95rem;
+}
+
+@media (max-width: 767px) {
+  .p-top-archive__cat {
+    margin-bottom: 1.55rem;
+  }
+}
+
+.p-top-archive__ttl {
+  font-size: 1.18rem;
+  font-weight: 600;
+  line-height: 1.24;
+}
+
+@media (max-width: 767px) {
+  .p-top-archive__ttl {
+    font-size: 1.65rem;
   }
 }
 
@@ -726,7 +809,13 @@ html {
 }
 
 .p-breadcrumb {
-  margin: 1.55rem 0;
+  margin: 2.55rem 0;
+}
+
+@media (max-width: 767px) {
+  .p-breadcrumb {
+    margin: 1.62rem 0;
+  }
 }
 
 .p-breadcrumb__lists {
@@ -737,6 +826,7 @@ html {
 
 .p-breadcrumb__item {
   display: inline-block;
+  line-height: 1;
   margin-right: .7rem;
   padding-right: .8rem;
   position: relative;
@@ -761,6 +851,7 @@ html {
 
 .p-breadcrumb__item a {
   color: #6a6a6a;
+  line-height: 1;
 }
 
 .content_area {
