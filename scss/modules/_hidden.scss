@@ -1,0 +1,32 @@
+
+.pc-display {
+	display: block !important;
+}
+
+.sp-display {
+	display: none !important;
+}
+
+
+
+.smart{
+	display: none;
+}
+
+
+@media (max-width: 767px) {
+	.pc-display {
+		display: none !important;
+	}
+	
+	.sp-display {
+		display: block !important;
+	}
+
+
+
+	.smart {
+		display: block;
+	}
+	
+}

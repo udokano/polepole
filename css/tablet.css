@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+@media only screen and (max-width: 1024px) {
+  .pc {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+  }
+
+  header #headerInner {
+    width: 96%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  #headerInner h1 img {
+    width: 96%;
+    height: auto;
+  }
+
+  .smartGnavi {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 5000;
+    overflow: hidden;
+
+    /* background-color: rgba(255,255,255,0.8);*/
+    background-color: rgba(0, 141, 90, 0.9);
+    -webkit-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+    transition-property: all;
+  }
+
+  .open {
+    opacity: 1;
+    display: block;
+    height: 100%;
+  }
+
+  .smartGnavi li {
+    letter-spacing: 0.1em;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 200;
+    border-top: white 1px dotted;
+    color: white;
+    padding: 12px 0;
+    padding-left: 1.5em;
+    cursor: pointer;
+  }
+
+  .smartGnavi ul li a {
+    display: block;
+  }
+
+  .smartGnavi #sp_menber_button {
+    text-align: center;
+    padding-left: 0;
+    background-color: rgba(255, 153, 0, 0.6);
+    border-bottom: white 1px dotted;
+  }
+
+  .smartGnavi #sp_donation_button {
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.6);
+    padding-left: 0;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  .smartGnavi .sp_sns_icons {
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  .smartGnavi .sp_sns_icons li {
+    border: none;
+    display: inline-block;
+    padding: 0 8px;
+  }
+
+  #top {
+    width: 63%;
+  }
+
+  .main_area {
+    width: 65%;
+  }
+
+  #sidebar-top {
+    width: 30%;
+    max-width: 300px;
+  }
+
+  .right_area {
+    width: 30%;
+  }
+
+  .title h2 {
+    width: 100%;
+  }
+
+  /* .newsTopic {
+		padding: 0 1%;
+	} */
+
+  /*   .newsText {
+        padding-left: 5%;
+        width: 40%;
+    }
+ */
+  /*   .thumbnail-wrap {
+        width: 180px;
+      } */
+
+  .footerInner {
+    width: 96%;
+  }
+
+  .access {
+    width: 50%;
+  }
+
+  .footerSns {
+    width: 40%;
+  }
+
+  .footerSns li {
+    margin-left: 5%;
+  }
+
+  /*各固定ページ見だし画像*/
+
+  .title_img {
+    padding-top: 70px;
+  }
+
+  /*アクセスページ*/
+  .gmap_wrap {
+    width: 90%;
+  }
+
+  #map {
+    height: 400px;
+  }
+}

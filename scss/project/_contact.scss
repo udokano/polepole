@@ -1,0 +1,53 @@
+/*コンタクトページ*/
+
+.contactWrap {
+	width: 70%;
+	margin: 20px auto;;
+}
+
+.contactWrap p {
+	font-size: 16px;
+}
+
+input {
+	padding: 5px 8px;
+	margin-top: 3px;
+	font-size: 14px;
+}
+
+input,textarea{
+	border: 1px solid #cccccc;
+	background-color: #f9f8f3;
+}
+
+input[type="text"] {
+	width: 18em;
+}
+
+input[type="email"] {
+	width: 20em;
+}
+
+input.tel {
+	width: 11em;
+}
+
+textarea {
+	width: 75%;
+	height: 150px;
+	overflow-y: scroll;
+}
+
+input[type="submit"]{
+	width: 150px;
+	font-size: 18px;
+	height: 40px;
+	border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  border-style: solid;
+  border-width: 1px;
+	border-radius: 8px;
+}
+
+.send {
+	vertical-align: middle;
+}

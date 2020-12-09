@@ -1,0 +1,355 @@
+/*サイドバー*/
+
+/*サイドスライドエリア*/
+
+.side_slide_link {
+    display: block;
+
+    p {
+        color: #333;
+    }
+}
+
+.side_slide_subject {
+    text-align: center;
+    width: 100%;
+    margin: 15px auto 5px;
+}
+
+.side_slide_subject h2 {
+    background-color: green;
+    color: white;
+    padding: 5px 0;
+}
+
+.side_slide_subject p {
+    padding: 7px 0;
+    font-size: 16px;
+}
+
+/*サイドスライド設定*/
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+#side_slide {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    margin: auto;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1100px) {
+    #side_slide {
+        height: 23vh;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #side_slide {
+        height: 25vh;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #side_slide {
+        height: 22vh;
+    }
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+#side_slide .bk-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-animation: bgAnime 15s infinite;
+    animation: bgAnime 15s infinite; /* 3画像 × 各5s = 15s */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+#side_slide .src1 {
+    background-image: url("../img/side_slide1.jpg");
+}
+
+#side_slide .src2 {
+    background-image: url("../img/side_slide2.jpg");
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+#side_slide .src3 {
+    background-image: url("../img/side_slide3.jpg");
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+
+@-webkit-keyframes bgAnime {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bgAnime {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.link-text {
+    margin: 20px auto 0;
+    text-align: center;
+    width: 96%;
+    max-width: 320px;
+}
+
+#download,
+#corporate-achievements {
+    position: relative;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    text-align: center;
+    padding: 0 12px;
+    border-radius: 3px;
+}
+
+.link-text a:hover {
+    opacity: 0.8;
+}
+
+/*.link-text a::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+	border-left: 7px solid white;
+	-webkit-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}*/
+
+.link-text #download {
+    background-color: #ff9900;
+    border-bottom: solid 3px #e18e67;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.link-text #corporate-achievements {
+    background-color: red;
+    border-bottom: solid 3px #b03739;
+    display: block;
+}
+
+/*サイドバナー*/
+.side_bannar {
+    margin: 50px 0;
+}
+
+.side_banner_image {
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.side_bannar .side_banner_image a {
+    padding: 0;
+}
+
+.side_bannar .side_banner_image a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/*アーカイブス、固定ページ、カテゴリーリストサイドバー*/
+
+.content__sidebar a {}
+
+.list-wrappre {
+    margin-bottom: 1.25rem;
+
+    &__ttl {
+        background-color: green;
+        font-size: 1.14rem;
+        color: white;
+        font-weight: 400;
+        padding: 1.2rem 1.87rem 1.13rem;
+        padding-right: 0;
+
+        //margin-bottom: 15px;
+        margin: 0;
+        text-align: left;
+        line-height: 1;
+
+        @media (max-width: 767px) {
+            font-size: 1.88rem;
+            padding-left: 2.53rem;
+        }
+    }
+
+    a {
+        color: green;
+        font-size: 16px;
+        position: relative;
+        display: block;
+        line-height: .9;
+        padding: 1.22rem 0;
+        padding-left: 2.85rem;
+        border: 1px solid #dedede;
+        border-top: none;
+
+        @media (max-width: 767px) {
+            padding: 1.5rem 0;
+            padding-left: 4.55rem;
+        }
+    }
+}
+
+.list-wrappre div {
+    margin-bottom: 20px;
+}
+
+.list-wrappre h2,
+.list-wrappre > li > a.txt-top {
+    background-color: green;
+    color: white;
+    font-weight: 400;
+    padding: 17px 0 15px;
+    padding-left: 27px;
+    line-height: 1.0;
+    font-size: 1.08rem;
+}
+
+.list-wrappre h2::before,
+.list-wrappre > li > a.txt-top::before {
+    border: none !important;
+}
+
+/*サイドバー三角*/
+
+.list-wrappre li > ul > li > a:before,
+.list-wrappre li a::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 1.95rem;
+    top: 50%;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid orange;
+    transform: translateY(-50%);
+
+    @media (max-width: 767px) {
+        left: 2.95rem;
+    }
+}
+
+.widget {
+    label {
+        display: none;
+    }
+
+    select {
+        appearance: none;
+        background: #f8f8f8 url(../img/select_arw.png) no-repeat 92% 50%;
+        background-size: .88rem auto;
+        background-color: #f8f8f8;
+        border-radius: .42rem;
+        display: block;
+        width: 100%;
+        padding: .98rem 1.22rem;
+        font-size: .88rem;
+        margin: 1.32rem 0;
+        color: #454545;
+    }
+}
+
+/*
+
+寄付のスライド
+----------------------------*/
+
+.p-dn-slide {
+    margin: 1.88rem 0;
+
+    @media (max-width: 767px) {
+        margin: 2.55rem 0;
+    }
+
+    &__item {}
+
+    &__link {}
+
+    &__img {
+        width: 100%;
+        height: 10.5rem;
+        margin-bottom: 1.22rem;
+
+        @media (max-width: 767px) {
+            height: 24.5rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__ttl {
+        text-align: center;
+        color: #333;
+        font-size: 1.05rem;
+        line-height: 1.24;
+
+        @media (max-width: 767px) {
+            font-size: 1.45rem;
+        }
+    }
+}
