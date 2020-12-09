@@ -8,6 +8,7 @@ Template Name: フロントページ
 
 
 
+
 <!-- ファーストビュースライド設定 -->
 <?php if (have_rows('top__slide',7578)): ?>
 <div class="key_visual" id="js-mt-spaece">
