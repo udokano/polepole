@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,user-scalable=no">
 <title><?php bloginfo('name'); ?></title>
-	
+
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?<?php echo filemtime( get_stylesheet_directory() . '/css/style.css'); ?>">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tablet.css?aa">
@@ -18,8 +18,8 @@
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
-	
-	
+
+
 	<script>
 		//WEBフォント
   (function(d) {
@@ -31,7 +31,7 @@
     h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
   })(document);
 	</script>
-	
+
  <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -62,10 +62,10 @@
 				<div class="icons pc">
 					<ul>
 						<li class="button_wrap">
-						<a href="<?php the_field("member",7579); ?>"  target="_blank" class="button_text"  id="member">会員になる</a>
+						<a href="<?php the_field("member",7578); ?>"  target="_blank" class="button_text"  id="member">会員になる</a>
 						</li>
 						<li class="button_wrap">
-						<a href="<?php the_field("donation",7579); ?>" target="_blank" class="button_text" id="donation">寄付する</a>
+						<a href="<?php the_field("donation",7578); ?>" target="_blank" class="button_text" id="donation">寄付する</a>
 						</li>
 						<li><a href="https://www.facebook.com/TanzaniaPolePoleClub" target="_blank">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/fb_icon.png" alt="フェイスブックリンク"></a></li>
@@ -96,11 +96,11 @@
 			  <?php the_sub_field('gnav_pear_sub_text',7579);?>
 		  </span>
 		</div>
-		
+
 		</a>
 		   <!-- サブリピートスタート メガメニュー-->
 		   <?php if (have_rows('gnav_child')): ?>
-   
+
 				<div class="mega-menu">
 					<ul class="mega-menu__list">
 					<?php while (have_rows('gnav_child', 7579)) : the_row(); ?>
@@ -115,7 +115,7 @@
 						<?php endwhile; ?>
 					</ul>
 				</div>
-       
+
         <?php endif; ?>
         <!--  サブリピートEND-->
 	</li>
@@ -132,7 +132,3 @@
 
 <?php endif; ?>
 		</header>
-
-
-
-
