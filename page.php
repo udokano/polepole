@@ -3,7 +3,7 @@
   <?php if(get_field('pages_header_img')): ?>
 
   <div class="page-head" id="js-mt-spaece">
-  
+
       <div class="page-head__img">
          <div class="page-head__img-inner">
             <img src="<?php the_field('pages_header_img'); ?>" alt="<?php the_title();?>">
@@ -23,12 +23,9 @@
   </h1>
 <?php endif; ?>
 
-<div class="inner">
-<?php breadcrumb(); ?>
+  <?php create_breadcrumb(); ?>
 
-</div>
 
- 
 <div class="content cf">
 
   <?php if(have_posts()): the_post(); ?>
@@ -63,7 +60,7 @@
 
   <?php  endif; ?>
 
-  
+
 </div>
 <!-- ./contents -->
 

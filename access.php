@@ -9,7 +9,7 @@ Template Name: アクセスページ
 <?php if(get_field('pages_header_img')): ?>
 
   <div class="page-head" id="js-mt-spaece">
-  
+
       <div class="page-head__img">
         <img src="<?php the_field('pages_header_img'); ?>" alt="<?php the_title();?>">
       </div>
@@ -28,12 +28,8 @@ Template Name: アクセスページ
 <?php endif; ?>
 
 
-  
 
-<div class="inner">
 <?php breadcrumb(); ?>
-</div>
-
 
 
 <div class="gmap_wrap space-top">
@@ -47,7 +43,7 @@ Template Name: アクセスページ
 
 
 <?php the_content();?>
-     
+
   <?php endwhile; endif; ?><!--ループ終了-->
 
     <div id="map"></div>
