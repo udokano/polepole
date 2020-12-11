@@ -29,7 +29,7 @@ Template Name: アクセスページ
 
 
 
-<?php breadcrumb(); ?>
+  <?php create_breadcrumb(); ?>
 
 
 <div class="gmap_wrap space-top">
