@@ -232,6 +232,13 @@ html {
   width: 100%;
 }
 
+.l-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1150px;
+  width: 90%;
+}
+
 /* 記事一覧へのボタン */
 .c-btn-toList {
   background-color: #f5a94c;
@@ -898,7 +905,7 @@ TOPアーカイブ新たに書く
 }
 
 .content_area a {
-  color: #e87334;
+  color: #333;
 }
 
 .content_area i {
@@ -1031,6 +1038,7 @@ TOPアーカイブ新たに書く
 .content_area table tr td,
 .content_area table tr th {
   border: 1px solid #c9c9c9;
+  font-size: 1.08rem;
   padding: .66rem .33rem;
   text-align: center;
   vertical-align: middle;
@@ -1842,7 +1850,7 @@ button.btn_menu span.bar {
     margin-bottom: 0;
     opacity: 0;
     /* overflow: hidden;
-		overflow-y: auto; /* scrollにはしないことでスクロールの必要がないときはスクロールバーを表示させない */
+        overflow-y: auto; /* scrollにはしないことでスクロールの必要がないときはスクロールバーを表示させない */
     overflow-y: scroll;
     position: fixed;
     transition: ease-in 0.22s;
@@ -2086,7 +2094,7 @@ button.btn_menu span.bar {
     display: none;
   }
   .pages-gnav__sub-text {
-    color: #cecece;
+    color: #bdbdbd;
     letter-spacing: 0;
   }
 }

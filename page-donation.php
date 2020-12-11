@@ -35,27 +35,48 @@ Template Name: 寄付ページ
   <?php create_breadcrumb(); ?>
 
 
-    <div class="p-donatin">
+    <div class="p-donation">
 
         <section class="p-donation-intro">
           <div class="l-inner">
                <h2 class="p-donation-intro__ttl"></h2>
                 <p class="p-donation-intro__desc"></p>
-
-                <div class="">
-                    <div class="">
-                      <img src="" alt="">
-                    </div>
-                    <p class=""></p>
-                    <p class=""></p>
-                </div>
           </div>
           <!-- ./inner -->
-           
         </section>
-    
+
+        <div class="p-donation-sticker">
+            <div class="p-donation-sticker__img">
+              <img src="" alt="">
+            </div>
+            <!-- ./img -->
+
+            <p class="p-donation-sticker__desc"></p>
+            <p class="p-donation-sticker__note"></p>
+
+        </div>
+        <!-- ./sticker -->
+
     </div>
-    <!-- ./donatin -->
-  
+    <!-- ./donation -->
+
+    <section class="p-dn-top">
+
+        <h2 class=""></h2>
+
+        <div class="">
+          <img src="" alt="">
+        </div>
+
+        <p class=""></p>
+
+        <ul class="c-btn-dn">
+          <li class="c-btn-dn__item">
+            <a href="" class=""></a>
+          </li>
+        </ul>
+
+    </section>
+
 
 <?php get_footer(); ?>
