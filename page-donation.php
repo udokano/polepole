@@ -72,7 +72,7 @@ Template Name: 寄付ページ
 
         <ul class="c-btn-dn">
           <li class="c-btn-dn__item">
-            <a href="" class=""></a>
+            <a href="" class="c-btn-dn__item"></a>
           </li>
         </ul>
 
