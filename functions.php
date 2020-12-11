@@ -176,6 +176,22 @@ function create_breadcrumb() {
 
 }
 
+//寄付ページのエディターとカスタムフィールド非表示
+
+function disable_visual_editor_in_page_template(){
+  global $typenow;
+  $template_name = basename( get_page_template_slug( $_GET['post'] ), '.php' );
+  if( $typenow == 'page' and $template_name == 'page-donation' ){
+      echo '<style>
+  #postdivrich,#acf-group_5e2d262866c3a {
+      display: none !important;
+  }
+  </style>'.PHP_EOL;
+  }
+}
+add_action( 'load-post.php', 'disable_visual_editor_in_page_template' );
+add_action( 'load-post-new.php', 'disable_visual_editor_in_page_template' );
+
 //段落挿入と改行入れ替え
 
 add_filter( 'tiny_mce_before_init', 'custom_tiny_mce_forced_root_block' );
