@@ -905,7 +905,7 @@ TOPアーカイブ新たに書く
 }
 
 .content_area a {
-  color: #333;
+  color: #3449e8;
 }
 
 .content_area i {
@@ -981,15 +981,17 @@ TOPアーカイブ新たに書く
   text-decoration: underline;
 }
 
-.content_area p, .content_area p.blog-articles {
-  font-size: 1rem;
+.content_area p,
+.content_area p.blog-articles {
+  font-size: 1.08rem;
   letter-spacing: .0075em;
   line-height: 1.88;
   margin-bottom: 1.55rem;
 }
 
 @media (max-width: 767px) {
-  .content_area p, .content_area p.blog-articles {
+  .content_area p,
+  .content_area p.blog-articles {
     font-size: 1.32rem;
   }
 }
@@ -1037,11 +1039,17 @@ TOPアーカイブ新たに書く
 
 .content_area table tr td,
 .content_area table tr th {
-  border: 1px solid #c9c9c9;
   font-size: 1.08rem;
-  padding: .66rem .33rem;
+  line-height: 1.02;
   text-align: center;
   vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  .content_area table tr td,
+  .content_area table tr th {
+    font-size: 1.32rem;
+  }
 }
 
 .content_area table thead tr th,

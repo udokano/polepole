@@ -215,8 +215,13 @@ function add_page_to_admin_menu()
 
 add_menu_page('ナビゲーション管理', 'ナビゲーション管理', 'edit_posts', '/post.php?post=7579&action=edit', '', 'dashicons-format-gallery
 ', 3);
+
+add_menu_page('アーカイブページ見出し管理', 'アーカイブページ見出し管理', 'edit_posts', '/post.php?post=9068&action=edit', '', 'dashicons-format-gallery
+', 3);
+
 }
 add_action('admin_menu', 'add_page_to_admin_menu');
+
 
 
 
