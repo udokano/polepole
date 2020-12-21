@@ -28,20 +28,24 @@ $('document').ready(function() {
 		nextArrow: "<div class='slide-arrow arrow-next'></div>"
 	});
 
-	//slickスライドTOPページ
+	//slickスライド寄付
 
 	$('#js-dn-slide').slick({
 		//{}を入れる
 		autoplay: true, //「オプション名: 値」の形式で書く
 		focusOnSelect: true,
-		dots: false, //複数書く場合は「,」でつなぐ
+		dots: true, //複数書く場合は「,」でつなぐ
 		//fade: true,
-		arrows: false,
+		arrows: true,
 		autoplaySpeed: 4000,
 		speed: 1000,
 		lazyLoad: 'progressive',
 		pauseOnFocus: false,
-		pauseOnHover: false
+		pauseOnHover: false,
+		//appendArrows: $('#js-dn-navs'),
+		appendDots: $('#js-dn-navs'),
+		prevArrow: "<div class='p-dn-slide__arw p-dn-slide__arw--prev'></div>",
+		nextArrow: "<div class='p-dn-slide__arw p-dn-slide__arw--next'></div>"
 	});
 
 	/*

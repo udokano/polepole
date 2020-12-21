@@ -2783,7 +2783,8 @@ button.btn_menu span.bar {
 寄付のスライド
 ----------------------------*/
 .p-dn-slide {
-  margin: 1.88rem 0;
+  margin: 1.88rem 0 1.1rem;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -2822,6 +2823,45 @@ button.btn_menu span.bar {
   .p-dn-slide__ttl {
     font-size: 1.45rem;
   }
+}
+
+.p-dn-slide__arw {
+  -webkit-transform: translateY(-50%);
+  background: no-repeat 50% 50%;
+  background-size: 100% auto;
+  height: 2.4rem;
+  opacity: .78;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  z-index: 300;
+}
+
+.p-dn-slide__arw--prev {
+  background-image: url("../img/dn_arw_prev.png");
+  left: .55rem;
+}
+
+.p-dn-slide__arw--next {
+  background-image: url("../img/dn_arw_next.png");
+  right: .55rem;
+}
+
+.p-dn-dots ul {
+  -webkit-transform: none;
+  font-size: 0;
+  position: static;
+  text-align: center;
+  transform: none;
+}
+
+.p-dn-dots li {
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  font-size: 0;
+  height: 10px;
+  width: 10px;
 }
 
 /*singleページタイトル周り*/

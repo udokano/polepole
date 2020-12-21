@@ -65,6 +65,8 @@
 
       <?php endwhile; ?>
     </ul>
+
+    <div id="js-dn-navs" class="p-dn-dots"></div>
 <?php else: ?>
 <?php endif; ?>
 
