@@ -211,7 +211,7 @@ h4 {
 
 body {
   color: #333;
-  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", "YuGthic", "Yu Gothic", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.7;
@@ -1039,9 +1039,9 @@ TOPアーカイブ新たに書く
 
 .content_area table tr td,
 .content_area table tr th {
+  border: 1px solid #c9c9c9;
   font-size: 1.08rem;
   line-height: 1.02;
-  text-align: center;
   vertical-align: middle;
 }
 
@@ -1600,9 +1600,10 @@ header #headerInner {
   box-sizing: border-box;
   height: 100%;
   margin: 0 auto;
+  max-width: 1200px;
   padding: 1.2rem 0;
   position: relative;
-  width: 1200px;
+  width: 92%;
 }
 
 @media (max-width: 767px) {
@@ -2237,9 +2238,9 @@ button.btn_menu span.bar {
 .page-head__img {
   height: 100%;
   position: absolute;
-  right: 15%;
+  right: 6%;
   top: 0;
-  width: 38%;
+  width: 49%;
 }
 
 .page-head__img img {
@@ -2269,7 +2270,7 @@ button.btn_menu span.bar {
   height: 100%;
   position: absolute;
   top: 0;
-  width: 27.8%;
+  width: 20.8%;
   z-index: 200;
 }
 
@@ -2782,7 +2783,8 @@ button.btn_menu span.bar {
 寄付のスライド
 ----------------------------*/
 .p-dn-slide {
-  margin: 1.88rem 0;
+  margin: 1.88rem 0 1.1rem;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -2821,6 +2823,45 @@ button.btn_menu span.bar {
   .p-dn-slide__ttl {
     font-size: 1.45rem;
   }
+}
+
+.p-dn-slide__arw {
+  -webkit-transform: translateY(-50%);
+  background: no-repeat 50% 50%;
+  background-size: 100% auto;
+  height: 2.4rem;
+  opacity: .78;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  z-index: 300;
+}
+
+.p-dn-slide__arw--prev {
+  background-image: url("../img/dn_arw_prev.png");
+  left: .55rem;
+}
+
+.p-dn-slide__arw--next {
+  background-image: url("../img/dn_arw_next.png");
+  right: .55rem;
+}
+
+.p-dn-dots ul {
+  -webkit-transform: none;
+  font-size: 0;
+  position: static;
+  text-align: center;
+  transform: none;
+}
+
+.p-dn-dots li {
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  font-size: 0;
+  height: 10px;
+  width: 10px;
 }
 
 /*singleページタイトル周り*/

@@ -122,8 +122,8 @@ strong.strong-text {
 
 table tr th,
 table tr td {
-	/* border: 1px solid #c9c9c9; */
-	text-align: center;
+	border: 1px solid #c9c9c9;
+	/* text-align: center; */
 	/* 	padding: .66rem .33rem; */
 	/* vertical-align: middle; */
 	line-height: 1.03;
