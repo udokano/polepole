@@ -11,16 +11,7 @@ location.href="<?php the_field('anthor_link'); ?>";
 
       <?php endif; ?>
 
-
-
-
-
-
 <?php get_header(); ?>
-
-
-
-
 
 <?php if(get_field('pages_header_img')): ?>
 
@@ -74,15 +65,15 @@ location.href="<?php the_field('anthor_link'); ?>";
       <?php if(get_field('pr_tit')):?>
       <div class="pr">
         <div class="pr__top">
-            <div class="pr__thumb">
-              <img src="<?php the_field('pr_thumb'); ?>" alt="キャッチ画像">
-            </div>
-
               <div class="pr__left">
 
                   <h3 class="pr__tit">
                     <?php the_field('pr_tit'); ?>
                   </h3>
+
+                   <div class="pr__thumb">
+              <img src="<?php the_field('pr_thumb'); ?>" alt="キャッチ画像">
+            </div>
 
                     <div class="pr__desc">
                       <?php the_field('pr_desc'); ?>
