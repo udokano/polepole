@@ -96,7 +96,7 @@
             <?php
                 $archives = get_archives_by_fiscal_year();
                 echo '<select onchange="location.href=value;">';
-                echo '<option>年を選択してください</option>';
+                echo '<option>対象年を選択</option>';
                 foreach($archives as $archive):
             ?>
 
@@ -128,6 +128,7 @@
 
       <?php endwhile; ?>
     </ul>
+    <div id="js-dn-navs" class="p-dn-dots"></div>
 <?php else: ?>
 <?php endif; ?>
     </div>
