@@ -217,6 +217,19 @@ body {
   line-height: 1.7;
 }
 
+/* MACの場合 */
+/* WINDOWSの場合 */
+body.windows {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", sans-serif;
+  font-weight: 500;
+}
+
+@media all and (-ms-high-contrast: none) {
+  body.windows {
+    font-family: 'メイリオ', 'Meiryo', sans-serif;
+  }
+}
+
 html {
   font-size: 100%;
 }
@@ -931,14 +944,12 @@ TOPアーカイブ新たに書く
 }
 
 .content_area h2.blog-title01 {
-  border-left: 3px solid #04932c;
   color: #0b842d;
   font-size: 1.88rem;
   font-weight: 600;
   line-height: 1.37;
   margin-bottom: 1.83rem;
   padding: .48rem 0;
-  padding-left: 1.38rem;
 }
 
 .content_area h3.blog-title02 {
@@ -1027,13 +1038,13 @@ TOPアーカイブ新たに書く
 
 .content_area img.alignright {
   /* float: right;
-    margin-right: 5%; */
+        margin-right: 5%; */
   margin-left: auto;
 }
 
 .content_area img.alignleft {
   /* float: left;
-    margin-left: 5%; */
+        margin-left: 5%; */
   margin-right: auto;
 }
 
@@ -1859,7 +1870,7 @@ button.btn_menu span.bar {
     margin-bottom: 0;
     opacity: 0;
     /* overflow: hidden;
-        overflow-y: auto; /* scrollにはしないことでスクロールの必要がないときはスクロールバーを表示させない */
+                overflow-y: auto; /* scrollにはしないことでスクロールの必要がないときはスクロールバーを表示させない */
     overflow-y: scroll;
     position: fixed;
     transition: ease-in 0.22s;
@@ -2083,7 +2094,7 @@ button.btn_menu span.bar {
     margin-bottom: 0;
   }
   .pages-gnav__item a {
-    color: #3f3f3f;
+    color: #353535;
     font-size: 0.9rem;
     font-weight: 400;
     line-height: 1.28;

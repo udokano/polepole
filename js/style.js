@@ -1,5 +1,5 @@
 // JavaScript Document
-$('document').ready(function() {
+$('document').ready(function () {
 	var headerHight = $('#js-header').outerHeight();
 
 	//ヘッダーの高さ分マージン
@@ -58,27 +58,27 @@ $('document').ready(function() {
   }); */
 
 	if (window.matchMedia('(max-width: 768px)').matches) {
-		$('.is-have-sub-menu').on('click', function() {
+		$('.is-have-sub-menu').on('click', function () {
 			$(this).toggleClass('is-ac-open');
 			$(this).next('.mega-menu').toggleClass('is-sp-mega-show');
 		});
 	} else {
-		$('.is-have-sub-menu').mouseover(function() {
+		$('.is-have-sub-menu').mouseover(function () {
 			$(this).addClass('is-arrow-show');
 		});
 
-		$('.is-have-sub-menu').mouseout(function() {
+		$('.is-have-sub-menu').mouseout(function () {
 			$(this).removeClass('is-arrow-show');
 		});
 	}
 
-	$('.is-no-link').on('click', function() {
+	$('.is-no-link').on('click', function () {
 		return false;
 	});
 
 	//ドロワーメニュー
 
-	$('#js-swchi').click(function() {
+	$('#js-swchi').click(function () {
 		$(this).toggleClass('active');
 		$('body').toggleClass('is-ov-hidden');
 		$('#js-gnav').toggleClass('is-gnav-show');
@@ -89,7 +89,7 @@ $('document').ready(function() {
 	if (window.matchMedia('(max-width: 768px)').matches) {
 	} else {
 		var offset = $('.gNavi').offset();
-		$(window).scroll(function() {
+		$(window).scroll(function () {
 			if ($(window).scrollTop() > offset.top + 120) {
 				$('.gNavi').addClass('fixed');
 			} else {
@@ -102,10 +102,10 @@ $('document').ready(function() {
 	var showTop = 200;
 
 	var fixedTop = $('#pagetop');
-	fixedTop.on('click', function() {
+	fixedTop.on('click', function () {
 		$('html,body').animate({ scrollTop: '0' }, 500);
 	});
-	$(window).on('load scroll resize', function() {
+	$(window).on('load scroll resize', function () {
 		if ($(window).scrollTop() >= showTop) {
 			fixedTop.fadeIn('normal');
 		} else if ($(window).scrollTop() < showTop) {
@@ -117,7 +117,7 @@ $('document').ready(function() {
 
 	$('option[value="-1"]').after("<option value='news'>全カテゴリー</option>");
 
-	$('#cat').on('change', function() {
+	$('#cat').on('change', function () {
 		var cat_val = $(this).val();
 		if (cat_val === 'news') {
 			location.href = 'http://polepoleclub.jp/pole2club/news/';
@@ -169,13 +169,13 @@ $('document').ready(function() {
       $('body,html').stop().animate({ scrollTop: position }, 500);
     }, 100); */
 		if (window.matchMedia('(max-width: 768px)').matches) {
-			$(window).on('load', function() {
+			$(window).on('load', function () {
 				var target = $(urlHash);
 				var position = target.offset().top - headerHight_anchor * 1.2;
 				$('body,html').stop().animate({ scrollTop: position }, 500);
 			});
 		} else {
-			$(window).on('load', function() {
+			$(window).on('load', function () {
 				var target = $(urlHash);
 				var position = target.offset().top - navHight * 3.5;
 				$('body,html').stop().animate({ scrollTop: position }, 500);
@@ -184,7 +184,7 @@ $('document').ready(function() {
 	}
 	if (window.matchMedia('(max-width: 768px)').matches) {
 		var anchor_hight = navHight; //ヘッダの高さ
-		$('a[href^=#]').click(function() {
+		$('a[href^=#]').click(function () {
 			var href = $(this).attr('href');
 			var target = $(href == '#' || href == '' ? 'html' : href);
 			var position = target.offset().top - headerHight_anchor * 1.2; //ヘッダの高さ分位置をずらす
@@ -193,7 +193,7 @@ $('document').ready(function() {
 		});
 	} else {
 		var anchor_hight = navHight; //ヘッダの高さ
-		$('a[href^=#]').click(function() {
+		$('a[href^=#]').click(function () {
 			var href = $(this).attr('href');
 			var target = $(href == '#' || href == '' ? 'html' : href);
 			var position = target.offset().top - anchor_hight * 3.5; //ヘッダの高さ分位置をずらす
@@ -202,3 +202,23 @@ $('document').ready(function() {
 		});
 	}
 }); //終了
+
+
+$(function () {
+
+	const $ua = navigator.userAgent;
+
+	console.log($ua);
+
+	if ($ua.indexOf('Mac') > 0) {
+		let body = document.getElementsByTagName('body')[0];
+		body.classList.add('mac');
+	}
+
+	if ($ua.indexOf('windows') > 0) {
+		let body = document.getElementsByTagName('body')[0];
+		body.classList.add('windows');
+	}
+
+
+});

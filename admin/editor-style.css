@@ -3,134 +3,136 @@
 /* CSS Document */
 
 body {
-	font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", "YuGthic", "Yu Gothic",
-		"メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", "YuGthic", "Yu Gothic", "メイリオ", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 a {
-	color: #3449e8;
-	text-decoration: none;
+    color: #3449e8;
+    text-decoration: none;
 }
 
 img {
-	width: auto;
-	height: auto;
-	max-width: 100%;
-	display: block;
-	margin-bottom: 1.22rem;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 1.22rem;
 }
 
 h2.blog-title01 {
-	font-size: 1.88rem;
-	line-height: 1.37;
-	padding-left: 1.38rem;
-	font-weight: 600;
-	border-left: 3px solid #04932c;
-	margin-bottom: 1.83rem;
-	color: #0b842d;
+    font-size: 1.88rem;
+    line-height: 1.37;
+
+    /*   padding-left: 1.38rem; */
+    font-weight: 600;
+
+    /* border-left: 3px solid #04932c; */
+    margin-bottom: 1.83rem;
+    color: #0b842d;
 }
 
 h3.blog-title02 {
-	font-size: 1.54rem;
-	line-height: 1.28;
-	padding-bottom: 0.472rem;
-	margin-bottom: 1.81rem;
-	border-bottom: 2px solid #d8d8d8;
-	position: relative;
+    font-size: 1.54rem;
+    line-height: 1.28;
+    padding-bottom: 0.472rem;
+    margin-bottom: 1.81rem;
+    border-bottom: 2px solid #d8d8d8;
+    position: relative;
 }
 
 h3.blog-title02::after {
-	content: '';
-	position: absolute;
-	bottom: -2px;
-	left: 0;
-	width: 9.88rem;
-	height: 2px;
-	background-color: #04932c;
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 9.88rem;
+    height: 2px;
+    background-color: #04932c;
 }
 
 h4.blog-title03 {
-	font-size: 1.38rem;
-	padding: 0.66rem 0.73rem;
-	margin-bottom: 1.84rem;
-	background-color: #f8f8f8;
-	border-left: 0.34rem solid #a7a7a7;
+    font-size: 1.38rem;
+    padding: 0.66rem 0.73rem;
+    margin-bottom: 1.84rem;
+    background-color: #f8f8f8;
+    border-left: 0.34rem solid #a7a7a7;
 }
 
 h5.blog-title04 {
-	font-size: 1.22rem;
-	padding-bottom: 0.95rem;
-	margin-bottom: 1.55rem;
-	border-bottom: 1px dotted #d2d2d2;
+    font-size: 1.22rem;
+    padding-bottom: 0.95rem;
+    margin-bottom: 1.55rem;
+    border-bottom: 1px dotted #d2d2d2;
 }
 
 p,
 p.blog-articles {
-	font-size: 1rem;
-	letter-spacing: .0075em;
-	line-height: 1.88;
-	margin-bottom: 1.55rem;
+    font-size: 1rem;
+    letter-spacing: .0075em;
+    line-height: 1.88;
+    margin-bottom: 1.55rem;
 }
 
 em {
-	font-style: italic;
+    font-style: italic;
 }
 
 i {
-	font-style: italic;
+    font-style: italic;
 }
 
 .aligncenter {
-	display: block;
-	margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 img.alignright {
-	/* float: right;
-	margin-right: 5%; */
-	margin-left: auto;
-	float: none;
+    /* float: right;
+    margin-right: 5%; */
+    margin-left: auto;
+    float: none;
 }
 
 img.alignleft {
-	/* float: left;
-	margin-left: 5%; */
-	margin-right: auto;
-	float: none;
+    /* float: left;
+    margin-left: 5%; */
+    margin-right: auto;
+    float: none;
 }
 
 .clearfix {
-	overflow: hidden;
-	zoom: 1;
+    overflow: hidden;
+    zoom: 1;
 }
 
 .clearfix:after {
-	content: "";
-	display: block;
-	clear: both;
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .marker {
-	background: linear-gradient(to bottom, #fff 70%, #e3f762 100%);
+    background: linear-gradient(to bottom, #fff 70%, #e3f762 100%);
 }
 
 strong.strong-text {
-	background-color: #fffdc8;
-	padding: .12rem .19rem .08rem;
-	font-weight: 600;
+    background-color: #fffdc8;
+    padding: .12rem .19rem .08rem;
+    font-weight: 600;
 }
 
 table tr th,
 table tr td {
-	border: 1px solid #c9c9c9;
-	/* text-align: center; */
-	/* 	padding: .66rem .33rem; */
-	/* vertical-align: middle; */
-	line-height: 1.03;
+    border: 1px solid #c9c9c9;
+
+    /* text-align: center; */
+    /* 	padding: .66rem .33rem; */
+    /* vertical-align: middle; */
+    line-height: 1.03;
 }
 
 table thead tr th,
 table thead tr td {
-	background-color: #4a4a4a;
-	color: #fff;
+    background-color: #4a4a4a;
+    color: #fff;
 }
