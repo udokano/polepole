@@ -14,29 +14,29 @@ Template Name: フロントページ
 			<ul class="key_visual__slides cf" id="js-slide">
 			<?php while (have_rows('top__slide',7578)) : the_row(); ?>
 			<li class="key_visual__item">
-<a href="<?php $link_type = get_sub_field( 'rd_select' ,7578); ?>
-<?php if(get_sub_field("slide__link_select",7578) && $link_type === "select"): ?>
-<?php the_sub_field('slide__link_select',7578);?>
-<?php endif; ?>
-<?php if(get_sub_field("slide__link",7578) && $link_type === "input"): ?>
-<?php the_sub_field('slide__link',7578);?>
-<?php endif; ?>" class="key_visual__link" <?php the_sub_field('new_window',7578); ?>>
-					 <img data-lazy="<?php the_sub_field('slide_img',7578);?>" alt="PCスライド３" class="pc-display"/>
-					 <img data-lazy="<?php the_sub_field('slide_img_sp',7578);?>" alt="SPスライド3" class="sp-display"/>
+				<a href="<?php $link_type = get_sub_field( 'rd_select' ,7578); ?>
+					<?php if(get_sub_field("slide__link_select",7578) && $link_type === "select"): ?>
+					<?php the_sub_field('slide__link_select',7578);?>
+					<?php endif; ?>
+					<?php if(get_sub_field("slide__link",7578) && $link_type === "input"): ?>
+					<?php the_sub_field('slide__link',7578);?>
+					<?php endif; ?>" class="key_visual__link" <?php the_sub_field('new_window',7578); ?>>
+						<img data-lazy="<?php the_sub_field('slide_img',7578);?>" alt="PCスライド３" class="pc-display"/>
+						<img data-lazy="<?php the_sub_field('slide_img_sp',7578);?>" alt="SPスライド3" class="sp-display"/>
 
-					 <div class="key_visual__text-box">
-						 <p class="key_visual__text-inner">
-								 <span class="key_visual__text-desc key_visual__text-desc--large"><?php the_sub_field('slide_cach__text',7578);?></span>
-								 <span style="font-size: <?php the_sub_field('r_fz',7578); ?>rem;">
-								<?php the_sub_field('slide__text__sub',7578);?>
-								</span>
+						<div class="key_visual__text-box">
+							<p class="key_visual__text-inner">
+									<span class="key_visual__text-desc key_visual__text-desc--large"><?php the_sub_field('slide_cach__text',7578);?></span>
+									<span style="font-size: <?php the_sub_field('r_fz',7578); ?>rem;">
+									<?php the_sub_field('slide__text__sub',7578);?>
+									</span>
 
-						 </p>
-							 <div class="key_visual__btn">
-							   <p class="key_visual__btn-text">詳しくはこちら</p>
-							 </div>
-					  </div>
-				 </a>
+							</p>
+								<div class="key_visual__btn">
+								<p class="key_visual__btn-text">詳しくはこちら</p>
+								</div>
+						</div>
+				 	</a>
 				 </li>
 				 <?php endwhile; ?>
 			</ul>

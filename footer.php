@@ -6,7 +6,22 @@
 					<?php while (have_rows('top_banner',7578)) : the_row(); ?>
 
 						<li class="bannerArea__item">
-							<a href="<?php the_sub_field('banner_link',7578); ?>" target="_blank">
+							<a href="
+							<?php $link_type = get_sub_field( 'banner_link_select' ,7578); ?>
+							
+
+							<?php if(get_sub_field("banner_link",7578) && $link_type === "select"): ?>
+							<?php the_sub_field('banner_link',7578); ?>
+
+							<?php elseif(get_sub_field("banner_link_input",7578) && $link_type === "input"): ?>
+
+									<?php the_sub_field('banner_link_input',7578); ?>
+
+							<?php endif;?>
+						
+							
+							
+							" target="_blank">
                   <div class="bannerArea__img-wrap">
                     <img src="<?php the_sub_field('banner_img',7578); ?>" alt="サイドバナー" class="bannerArea__img">
                   </div>

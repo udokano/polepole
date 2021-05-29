@@ -12,14 +12,7 @@ location.href="<?php the_field('anthor_link'); ?>";
       <?php endif; ?>
 
 
-
-
-
-
 <?php get_header(); ?>
-
-
-
 
 
 <?php if(get_field('pages_header_img')): ?>
