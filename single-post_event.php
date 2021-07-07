@@ -19,9 +19,7 @@
       <span class="page-head-no-img__text"><?php the_title();?></span>
   </h1>
 <?php endif; ?>
-<div class="inner">
-  <?php breadcrumb(); ?>
-</div>
+
 <div class="content cf space-top">
   <?php if(have_posts()): the_post(); ?>
   <section class="main_area">

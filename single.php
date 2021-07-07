@@ -11,8 +11,15 @@ location.href="<?php the_field('anthor_link'); ?>";
 
       <?php endif; ?>
 
+<<<<<<< HEAD
+
 <?php get_header(); ?>
 
+
+=======
+<?php get_header(); ?>
+
+>>>>>>> 410d067cb8e9da6ecb4f055ac035c52cb4b4d1dc
 <?php if(get_field('pages_header_img')): ?>
 
   <div class="page-head" id="js-mt-spaece">

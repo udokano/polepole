@@ -39,10 +39,12 @@
      <header class="site-header" id="js-header">
 		 <div id="headerInner">
          <h1 class="logo">
-			 <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png?3333333sdcfffgg"
-					alt="タンザニア・ポレポレクラブ"></a>
+			 <a href="<?php echo home_url(); ?>">
+			 	<img src="<?php echo get_template_directory_uri(); ?>/img/logo.png?3333333sdcfffgg"
+					alt="タンザニア・ポレポレクラブ">
+			 </a>
 		</h1>
-    <!--ドロワーメニュー-->
+    		<!--ドロワーメニュー-->
 				<button type="button" class="btn_menu smart" id="js-swchi">
 				  <span class="bar bar1"></span>
 				  <span class="bar bar2"></span>
