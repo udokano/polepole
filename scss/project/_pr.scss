@@ -1,35 +1,21 @@
 /*PRエリア*/
 
-
 .pr {
-	padding: 2.22rem;
+	padding: 2.8rem 2.6rem;
 	background-color: #f4f4f4;
+	text-align: center;
+	border-radius: .44rem;
 	&__top {
-		display: flex;
+		/* display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: center; */
 		@media (max-width: 767px) {
 			display: block;
 		}
 	}
 
-	&__thumb {
-		width: 46%;
-		height: 100%;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-		@media (max-width: 767px) {
-			width: 90%;
-			margin: 0 auto 1.3rem;
-		}
-	}
-
 	&__left {
-		width: 49%;
+		width: 100%;
 		position: relative;
 		word-break: break-all;
 		display: flex;
@@ -44,27 +30,48 @@
 		font-size: 1.4rem;
 		//margin-bottom: .88rem;
 		font-weight: 600;
+
 		@media (max-width: 767px) {
 			text-align: center;
 			font-size: 1.9rem;
 		}
 	}
 
-	&__desc {
-		font-size: 0.98rem;
-		margin: 1.6rem 0 2.32rem;
+	&__thumb {
+		width: 70%;
+		height: auto;
+		display: block;
+		margin: 2.22rem auto 2.05rem;
+		img {
+			/* width: 100%;
+			height: 100%;
+			object-fit: cover; */
+		}
+
+		@media (max-width: 767px) {
+			width: 90%;
+			margin: 1.6rem auto 2.3rem;
+		}
 	}
 
+	&__desc {
+		font-size: 0.98rem;
+		/* text-align: left; */
 
-	
+		margin: 0 0 2.32rem;
+
+		@media (max-width: 767px) {
+			font-size: 1.25rem;
+		}
+	}
 }
 
-
-
- .pr_btn {
+.pr_btn {
+	width: 80%;
 	display: block;
-	
-	padding: 1.2rem 1.9rem;
+	margin: 0 auto;
+
+	padding: 1.2rem 0;
 	font-weight: 600;
 	letter-spacing: .005em;
 	text-align: center;
@@ -75,10 +82,14 @@
 	bottom: 0;
 	left: 50%;
 	transform: translateX(-50%); */
+	@media (max-width: 767px) {
+		width: 90%;
+		padding: 1.6rem 0;
+	}
 }
 
 .pr_btn.red {
-	background-color: #BB3314;
+	background-color: #bb3314;
 }
 
 .pr_btn.green {
@@ -86,9 +97,9 @@
 }
 
 .pr_btn.yellow {
-	background-color: #E7C512;
+	background-color: #e7c512;
 }
 
 .pr_btn.yellow {
-	background-color: #399FEB;
+	background-color: #399feb;
 }

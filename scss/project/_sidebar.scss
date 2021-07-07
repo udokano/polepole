@@ -17,14 +17,29 @@
 }
 
 .side_slide_subject h2 {
-	background-color: green;
+	//background-color: green;
+	background-color: #484848;
 	color: white;
-	padding: 5px 0;
+	font-size: 1.04rem;
+	padding: .65rem 0;
+	line-height: 1;
+	@media (max-width: 767px) {
+		padding: 1.2rem 0;
+		font-size: 1.45rem;
+		font-weight: 600;
+		margin-bottom: .34rem;
+	}
 }
 
 .side_slide_subject p {
-	padding: 7px 0;
-	font-size: 16px;
+	padding: .62rem 0;
+	font-size: .94rem;
+	color: #6d6d6d;
+	line-height: 1.28;
+	@media (max-width: 767px) {
+		padding: 1.2rem 0;
+		font-size: 1.33rem;
+	}
 }
 
 /*サイドスライド設定*/
@@ -52,7 +67,7 @@
 
 @media only screen and (max-width: 600px) {
 	#side_slide {
-		height: 22vh;
+		height: 48vw;
 	}
 }
 
@@ -133,10 +148,14 @@
 }
 
 .link-text {
-	margin: 20px auto 0;
+	margin: 2.2rem auto 3.3rem;
 	text-align: center;
-	width: 96%;
+	width: 90%;
 	max-width: 320px;
+
+	@media (max-width: 767px) {
+		width: 87%;
+	}
 }
 
 #download,
@@ -148,6 +167,12 @@
 	text-align: center;
 	padding: 0 12px;
 	border-radius: 3px;
+	font-weight: 600;
+	letter-spacing: .075em;
+	font-size: .9rem;
+	@media (max-width: 767px) {
+		font-size: 1.37rem;
+	}
 }
 
 .link-text a:hover {
@@ -230,7 +255,7 @@
 
 		@media (max-width: 767px) {
 			font-size: 1.88rem;
-			padding-left: 2.53rem;
+			padding-left: 1.53rem;
 		}
 	}
 
@@ -260,11 +285,14 @@
 .list-wrappre > li > a.txt-top {
 	background-color: green;
 	color: white;
-	font-weight: 400;
-	padding: 17px 0 15px;
-	padding-left: 27px;
+	font-weight: 600;
+	padding: 1.02rem 1.44rem;
 	line-height: 1.0;
 	font-size: 1.08rem;
+	@media (max-width: 767px) {
+		font-size: 1.38rem;
+		padding: 1.62rem 1.44rem;
+	}
 }
 
 .list-wrappre h2::before,
@@ -304,10 +332,16 @@
 		border-radius: .42rem;
 		display: block;
 		width: 100%;
-		padding: .98rem 1.22rem;
+		padding: 0 1.22rem;
+		height: 47px;
 		font-size: .88rem;
 		margin: 1.32rem 0;
 		color: #454545;
+		line-height: normal;
+
+		@media (max-width: 767px) {
+			font-size: 1.18rem;
+		}
 	}
 }
 
@@ -361,12 +395,16 @@
 		top: 40%;
 		position: absolute;
 		transform: translateY(-50%);
-		width: 1.7rem;
+		width: 1.2rem;
 		height: 2.4rem;
 		z-index: 300;
 		background: no-repeat 50% 50%;
 		background-size: 100% auto;
 		opacity: .78;
+		@media (max-width: 767px) {
+			width: 2.2rem;
+			top: 45%;
+		}
 		&--prev {
 			background-image: url("../img/dn_arw_prev.png");
 			left: .55rem;
