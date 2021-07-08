@@ -10,12 +10,13 @@ var cssdeclsort = require('css-declaration-sorter'); //css並べ替え
 var imagemin = require('gulp-imagemin');
 var pngquant = require('imagemin-pngquant');
 var mozjpeg = require('imagemin-mozjpeg');
-
+var sourcemaps = require('gulp-sourcemaps');
 
 // scssのコンパイル
 gulp.task('sass', function () {
     return gulp
         .src('./scss/**/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))//エラーチェック
         .pipe(sassGlob())//importの読み込みを簡潔にする
         .pipe(sass({
@@ -30,6 +31,7 @@ gulp.task('sass', function () {
             }
         )]))
         .pipe(postcss([cssdeclsort({ order: 'alphabetically' })]))//プロパティをソートし直す(アルファベット順)
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./css'));//コンパイル後の出力先
 });
 
