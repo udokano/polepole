@@ -229,8 +229,8 @@ function my_tinymce($settings) {
 	$settings['block_formats'] = '段落=p;見出し1=h2;見出し2=h3;見出し3=h4;見出し4=h5;';
 	$settings['indent_use_margin'] = true; /*インデントのpadding-leftをmargin-leftに変える*/
 	$settings['indentation'] = '2px';          /*インデント量を1文字にする。1emを使わないのは文字サイズでインデント量を変えない為*/
-	$settings['fontsize_formats'] = "10px 12px 14px 16px 18px 20px 22px 24px 26px 28px 30px 32px 34px 36px 38px 40px 42px 44px";
-	$settings['font_formats'] ='メイリオ=Meiryo;游ゴシック=Yu Gothic;游ゴシック Medium=Yu Gothic Medium;Arial=Arial;Verdana=Verdana;Times New Roman=Times New Roman;GEORGIA=GEORGIA;Myriad=Myriad;Menlo=Menlo;ＭＳ ゴシック=ＭＳ ゴシック';
+	$settings['fontsize_formats'] = "超小さい=.66rem 小さい=.88rem 普通=1.08rem 大きい=1.32rem 超大きい=1.55rem";
+	$settings['font_formats'] ='メイリオ=Meiryo;Avenir=Avenir;Helvetica=Helvetica';
 	$settings['cache_suffix'] = 'v='.time();
 	return $settings;}
 add_filter( 'tiny_mce_before_init', 'my_tinymce' );
@@ -295,3 +295,5 @@ function _my_tinymce($initArray) {
     return $initArray;
 }
 add_filter('tiny_mce_before_init', '_my_tinymce', 10000);
+
+
