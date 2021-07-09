@@ -18,7 +18,11 @@
                     $cat_id = $cat->cat_ID;
                     $term_idsp = 'category_'.$cat_id;
 
+                    echo '<div class="caregory-list">';
+
                      foreach ($cats as $cat) {
                     echo '<span class="category-area '.$cat['slug']. '" style="background-color:'.get_field("cat_bg",'category_'. $cat['ID']).';">'.$cat['name'].'</span>';
                     }
+
+                    echo '</div>';
                     ?>
