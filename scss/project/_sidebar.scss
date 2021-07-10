@@ -3,180 +3,214 @@
 /*サイドスライドエリア*/
 
 .side_slide_link {
-	display: block;
+  display: block;
 
-	p {
-		color: #333;
-	}
+  p {
+    color: #333;
+  }
 }
 
 .side_slide_subject {
-	text-align: center;
-	width: 100%;
-	margin: 15px auto 5px;
+  text-align: center;
+  width: 100%;
+  margin: 15px auto 5px;
 }
 
 .side_slide_subject h2 {
-	//background-color: green;
-	background-color: #484848;
-	color: white;
-	font-size: 1.04rem;
-	padding: .65rem 0;
-	line-height: 1;
-	@media (max-width: 767px) {
-		padding: 1.2rem 0;
-		font-size: 1.45rem;
-		font-weight: 600;
-		margin-bottom: .34rem;
-	}
+  //background-color: green;
+
+  color: white;
+
+  line-height: 1;
+  @media (max-width: 767px) {
+    padding: 1.2rem 0;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 0.34rem;
+  }
 }
 
 .side_slide_subject p {
-	padding: .62rem 0;
-	font-size: .94rem;
-	color: #6d6d6d;
-	line-height: 1.28;
-	@media (max-width: 767px) {
-		padding: 1.2rem 0;
-		font-size: 1.33rem;
-	}
+  line-height: 1.28;
+  @media (max-width: 767px) {
+    padding: 1.2rem 0;
+    font-size: 1.33rem;
+  }
+}
+.collect-heddings {
+  text-align: center;
+  &__ttl {
+    background-color: #484848;
+    color: #fff;
+    font-size: 1.04rem;
+    padding: 0.65rem 0;
+    @media (max-width: 767px) {
+      font-size: 1.44rem;
+    }
+  }
+
+  &__desc {
+    padding: 0.62rem 0;
+    font-size: 0.94rem;
+    color: #6d6d6d;
+    line-height: 1.28;
+  }
+}
+
+.collect-slide {
+  opacity: 0;
+  &.slick-initialized {
+    opacity: 1;
+  }
+  &__item {
+    width: 100%;
+    height: rem(182);
+    @media (max-width: 767px) {
+      height: 43vw;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 
 /*サイドスライド設定*/
 
 /* --- 全体のBOX定義 ---------------------------------------- */
 #side_slide {
-	position: relative;
-	width: 100%;
-	height: 160px;
-	margin: auto;
-	overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 160px;
+  margin: auto;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1100px) {
-	#side_slide {
-		height: 23vh;
-	}
+  #side_slide {
+    height: 23vh;
+  }
 }
 
 @media only screen and (max-width: 800px) {
-	#side_slide {
-		height: 25vh;
-	}
+  #side_slide {
+    height: 25vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-	#side_slide {
-		height: 48vw;
-	}
+  #side_slide {
+    height: 48vw;
+  }
 }
 
 /* --- 背景の指定 ------------------------------------------- */
 #side_slide .bk-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	opacity: 0;
-	-webkit-animation: bgAnime 15s infinite;
-	animation: bgAnime 15s infinite; /* 3画像 × 各5s = 15s */
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-animation: bgAnime 15s infinite;
+  animation: bgAnime 15s infinite; /* 3画像 × 各5s = 15s */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* --- 段差で背景画像のアニメーションを実行 ----------------- */
 #side_slide .src1 {
-	background-image: url("../img/side_slide1.jpg");
+  background-image: url('../img/side_slide1.jpg');
 }
 
 #side_slide .src2 {
-	background-image: url("../img/side_slide2.jpg");
-	-webkit-animation-delay: 5s;
-	animation-delay: 5s;
+  background-image: url('../img/side_slide2.jpg');
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
 }
 
 #side_slide .src3 {
-	background-image: url("../img/side_slide3.jpg");
-	-webkit-animation-delay: 10s;
-	animation-delay: 10s;
+  background-image: url('../img/side_slide3.jpg');
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
 }
 
 @-webkit-keyframes bgAnime {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	5% {
-		opacity: 1;
-	}
+  5% {
+    opacity: 1;
+  }
 
-	25% {
-		opacity: 1;
-	}
+  25% {
+    opacity: 1;
+  }
 
-	30% {
-		opacity: 0;
-	}
+  30% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 0;
-	}
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes bgAnime {
-	0% {
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
 
-	5% {
-		opacity: 1;
-	}
+  5% {
+    opacity: 1;
+  }
 
-	25% {
-		opacity: 1;
-	}
+  25% {
+    opacity: 1;
+  }
 
-	30% {
-		opacity: 0;
-	}
+  30% {
+    opacity: 0;
+  }
 
-	100% {
-		opacity: 0;
-	}
+  100% {
+    opacity: 0;
+  }
 }
 
 .link-text {
-	margin: 2.2rem auto 3.3rem;
-	text-align: center;
-	width: 90%;
-	max-width: 320px;
+  margin: 2.2rem auto 3.3rem;
+  text-align: center;
+  width: 90%;
+  max-width: 320px;
 
-	@media (max-width: 767px) {
-		width: 87%;
-	}
+  @media (max-width: 767px) {
+    width: 87%;
+  }
 }
 
 #download,
 #corporate-achievements {
-	position: relative;
-	height: 45px;
-	line-height: 45px;
-	color: white;
-	text-align: center;
-	padding: 0 12px;
-	border-radius: 3px;
-	font-weight: 600;
-	letter-spacing: .075em;
-	font-size: .9rem;
-	@media (max-width: 767px) {
-		font-size: 1.37rem;
-	}
+  position: relative;
+  height: 45px;
+  line-height: 45px;
+  color: white;
+  text-align: center;
+  padding: 0 12px;
+  border-radius: 3px;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  font-size: 0.9rem;
+  @media (max-width: 767px) {
+    font-size: 1.37rem;
+  }
 }
 
 .link-text a:hover {
-	opacity: 0.8;
+  opacity: 0.8;
 }
 
 /*.link-text a::before {
@@ -196,40 +230,40 @@
 }*/
 
 .link-text #download {
-	background-color: #ff9900;
-	border-bottom: solid 3px #e18e67;
-	margin-bottom: 5px;
-	display: block;
+  background-color: #ff9900;
+  border-bottom: solid 3px #e18e67;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .link-text #corporate-achievements {
-	background-color: red;
-	border-bottom: solid 3px #b03739;
-	display: block;
+  background-color: red;
+  border-bottom: solid 3px #b03739;
+  display: block;
 }
 
 /*サイドバナー*/
 .side_bannar {
-	margin: 50px 0;
+  margin: 50px 0;
 }
 
 .side_banner_image {
-	text-align: center;
-	width: 100%;
-	max-width: 300px;
-	height: auto;
-	margin: 0 auto;
-	margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .side_bannar .side_banner_image a {
-	padding: 0;
+  padding: 0;
 }
 
 .side_bannar .side_banner_image a img {
-	width: 100%;
-	height: auto;
-	object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 /*アーカイブス、固定ページ、カテゴリーリストサイドバー*/
@@ -238,111 +272,111 @@
 }
 
 .list-wrappre {
-	margin-bottom: 1.25rem;
+  margin-bottom: 1.25rem;
 
-	&__ttl {
-		background-color: green;
-		font-size: 1.14rem;
-		color: white;
-		font-weight: 400;
-		padding: 1.2rem 1.87rem 1.13rem;
-		padding-right: 0;
+  &__ttl {
+    background-color: green;
+    font-size: 1.14rem;
+    color: white;
+    font-weight: 400;
+    padding: 1.2rem 1.87rem 1.13rem;
+    padding-right: 0;
 
-		//margin-bottom: 15px;
-		margin: 0;
-		text-align: left;
-		line-height: 1;
+    //margin-bottom: 15px;
+    margin: 0;
+    text-align: left;
+    line-height: 1;
 
-		@media (max-width: 767px) {
-			font-size: 1.88rem;
-			padding-left: 1.53rem;
-		}
-	}
+    @media (max-width: 767px) {
+      font-size: 1.88rem;
+      padding-left: 1.53rem;
+    }
+  }
 
-	a {
-		color: green;
-		font-size: 16px;
-		position: relative;
-		display: block;
-		line-height: .9;
-		padding: 1.22rem 0;
-		padding-left: 2.85rem;
-		border: 1px solid #dedede;
-		border-top: none;
+  a {
+    color: green;
+    font-size: 16px;
+    position: relative;
+    display: block;
+    line-height: 0.9;
+    padding: 1.22rem 0;
+    padding-left: 2.85rem;
+    border: 1px solid #dedede;
+    border-top: none;
 
-		@media (max-width: 767px) {
-			padding: 1.5rem 0;
-			padding-left: 4.55rem;
-		}
-	}
+    @media (max-width: 767px) {
+      padding: 1.5rem 0;
+      padding-left: 4.55rem;
+    }
+  }
 }
 
 .list-wrappre div {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .list-wrappre h2,
 .list-wrappre > li > a.txt-top {
-	background-color: green;
-	color: white;
-	font-weight: 600;
-	padding: 1.02rem 1.44rem;
-	line-height: 1.0;
-	font-size: 1.08rem;
-	@media (max-width: 767px) {
-		font-size: 1.38rem;
-		padding: 1.62rem 1.44rem;
-	}
+  background-color: green;
+  color: white;
+  font-weight: 600;
+  padding: 1.02rem 1.44rem;
+  line-height: 1;
+  font-size: 1.08rem;
+  @media (max-width: 767px) {
+    font-size: 1.38rem;
+    padding: 1.62rem 1.44rem;
+  }
 }
 
 .list-wrappre h2::before,
 .list-wrappre > li > a.txt-top::before {
-	border: none !important;
+  border: none !important;
 }
 
 /*サイドバー三角*/
 
 .list-wrappre li > ul > li > a:before,
 .list-wrappre li a::before {
-	content: "";
-	position: absolute;
-	display: inline-block;
-	left: 1.95rem;
-	top: 50%;
-	border-top: 4px solid transparent;
-	border-bottom: 4px solid transparent;
-	border-left: 6px solid orange;
-	transform: translateY(-50%);
+  content: '';
+  position: absolute;
+  display: inline-block;
+  left: 1.95rem;
+  top: 50%;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid orange;
+  transform: translateY(-50%);
 
-	@media (max-width: 767px) {
-		left: 2.95rem;
-	}
+  @media (max-width: 767px) {
+    left: 2.95rem;
+  }
 }
 
 .widget {
-	label {
-		display: none;
-	}
+  label {
+    display: none;
+  }
 
-	select {
-		appearance: none;
-		background: #f8f8f8 url(../img/select_arw.png) no-repeat 92% 50%;
-		background-size: .88rem auto;
-		background-color: #f8f8f8;
-		border-radius: .42rem;
-		display: block;
-		width: 100%;
-		padding: 0 1.22rem;
-		height: 47px;
-		font-size: .88rem;
-		margin: 1.32rem 0;
-		color: #454545;
-		line-height: normal;
+  select {
+    appearance: none;
+    background: #f8f8f8 url(../img/select_arw.png) no-repeat 92% 50%;
+    background-size: 0.88rem auto;
+    background-color: #f8f8f8;
+    border-radius: 0.42rem;
+    display: block;
+    width: 100%;
+    padding: 0 1.22rem;
+    height: 47px;
+    font-size: 0.88rem;
+    margin: 1.32rem 0;
+    color: #454545;
+    line-height: normal;
 
-		@media (max-width: 767px) {
-			font-size: 1.18rem;
-		}
-	}
+    @media (max-width: 767px) {
+      font-size: 1.18rem;
+    }
+  }
 }
 
 /*
@@ -351,85 +385,85 @@
 ----------------------------*/
 
 .p-dn-slide {
-	margin: 1.88rem 0 1.1rem;
-	position: relative;
+  margin: 1.88rem 0 1.1rem;
+  position: relative;
 
-	@media (max-width: 767px) {
-		margin: 2.55rem 0;
-	}
+  @media (max-width: 767px) {
+    margin: 2.55rem 0;
+  }
 
-	&__item {
-	}
+  &__item {
+  }
 
-	&__link {
-	}
+  &__link {
+  }
 
-	&__img {
-		width: 100%;
-		height: 10.5rem;
-		margin-bottom: 1.22rem;
+  &__img {
+    width: 100%;
+    height: 10.5rem;
+    margin-bottom: 1.22rem;
 
-		@media (max-width: 767px) {
-			height: 24.5rem;
-		}
+    @media (max-width: 767px) {
+      height: 24.5rem;
+    }
 
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-	}
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-	&__ttl {
-		text-align: center;
-		color: #333;
-		font-size: 1.05rem;
-		line-height: 1.24;
+  &__ttl {
+    text-align: center;
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.24;
 
-		@media (max-width: 767px) {
-			font-size: 1.45rem;
-		}
-	}
+    @media (max-width: 767px) {
+      font-size: 1.45rem;
+    }
+  }
 
-	&__arw {
-		top: 40%;
-		position: absolute;
-		transform: translateY(-50%);
-		width: 1.2rem;
-		height: 2.4rem;
-		z-index: 300;
-		background: no-repeat 50% 50%;
-		background-size: 100% auto;
-		opacity: .78;
-		@media (max-width: 767px) {
-			width: 2.2rem;
-			top: 45%;
-		}
-		&--prev {
-			background-image: url("../img/dn_arw_prev.png");
-			left: .55rem;
-		}
+  &__arw {
+    top: 40%;
+    position: absolute;
+    transform: translateY(-50%);
+    width: 1.2rem;
+    height: 2.4rem;
+    z-index: 300;
+    background: no-repeat 50% 50%;
+    background-size: 100% auto;
+    opacity: 0.78;
+    @media (max-width: 767px) {
+      width: 2.2rem;
+      top: 45%;
+    }
+    &--prev {
+      background-image: url('../img/dn_arw_prev.png');
+      left: 0.55rem;
+    }
 
-		&--next {
-			background-image: url('../img/dn_arw_next.png');
-			right: .55rem;
-		}
-	}
+    &--next {
+      background-image: url('../img/dn_arw_next.png');
+      right: 0.55rem;
+    }
+  }
 }
 
 .p-dn-dots {
-	ul {
-		text-align: center;
-		position: static;
-		transform: none;
-		font-size: 0;
-	}
+  ul {
+    text-align: center;
+    position: static;
+    transform: none;
+    font-size: 0;
+  }
 
-	li {
-		font-size: 0;
-		background-color: #dcdcdc;
-		border-radius: 50%;
-		width: 10px;
-		height: 10px;
-	}
+  li {
+    font-size: 0;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
 }

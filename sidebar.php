@@ -11,17 +11,17 @@
     ?>
 <a href="<?php echo esc_url($link['url']) ?>" class="side_slide_link" target="<?php echo esc_attr($link['target']) ?>">
 
-        <div class="side_slide_subject">
-                <h2>収集活動にご協力ください!</h2>
-                <p>収集活動によって蘇る森<br>
+        <div class="collect-heddings">
+                <h2 class="collect-heddings__ttl">収集活動にご協力ください!</h2>
+                <p class="collect-heddings__desc">収集活動によって蘇る森<br>
             (同じ植林地の写真です)</p>
         </div>
 
         <?php if (have_rows('clt_slide_area_qp',7578)): ?>
-                <ul class="" id="js-collect-slide">
-                    <?php while (have_rows('clt_slide_area_qp',7578)) : the_row(); ?>>
-                        <li class="">
-                            <img src="<?php the_sub_field('clt_slide_area_img',7578); ?>" alt="">
+                <ul class="collect-slide" id="js-collect-slide">
+                    <?php while (have_rows('clt_slide_area_qp',7578)) : the_row(); ?>
+                        <li class="collect-slide__item">
+                            <img data-lazy="<?php the_sub_field('clt_slide_area_img',7578); ?>" alt="">
                         </li>
                     <?php endwhile; ?>
                 </ul>
