@@ -7,18 +7,25 @@
 <!-- TOPページのみ表示 -->
 
 <aside class="content__sidebar content__sidebar--top" id="sidebar-top">
-<a href="<?php the_field("side_silde_link",7578);?>" class="side_slide_link">
+    <?php $link = get_field("clt_slide_area_link",7578);
+    ?>
+<a href="<?php echo esc_url($link['url']) ?>" class="side_slide_link" target="<?php echo esc_attr($link['target']) ?>">
 
         <div class="side_slide_subject">
                 <h2>収集活動にご協力ください!</h2>
                 <p>収集活動によって蘇る森<br>
             (同じ植林地の写真です)</p>
         </div>
-        <div id="side_slide">
-            <div class="bk-img src1"></div>
-            <div class="bk-img src2"></div>
-            <div class="bk-img src3"></div>
-        </div>
+
+        <?php if (have_rows('clt_slide_area_qp',7578)): ?>
+                <ul class="" id="js-collect-slide">
+                    <?php while (have_rows('clt_slide_area_qp',7578)) : the_row(); ?>>
+                        <li class="">
+                            <img src="<?php the_sub_field('clt_slide_area_img',7578); ?>" alt="">
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+        <?php endif; ?>
 
 </a>
 
