@@ -59,7 +59,7 @@ location.href="<?php the_field('anthor_link'); ?>";
           <?php get_template_part('inc__category-list'); ?>
       </div>
       <!-- ./category-date-wrap -->
-      <div class="content_area clearfix">
+      <div class="content_area clearfix" id="js-edit">
         <?php remove_filter('the_content', 'wpautop'); ?>
         <?php the_content(); ?>
       </div>

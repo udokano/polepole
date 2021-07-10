@@ -36,7 +36,7 @@
   <section class="content__main">
 
    <article class="main_area">
-      <div class="content_area">
+      <div class="content_area" id="js-edit">
         <?php the_content(); ?>
       </div>
     </article>

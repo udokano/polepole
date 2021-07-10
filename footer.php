@@ -56,6 +56,9 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/style.js?<?php echo filemtime(get_template_directory() . '/js/style.js'); ?>"></script>
+<?php if(is_single() || is_page()): ?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/font-size-aj.js"></script>
+<?php endif; ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/css_browser_selector.js"></script>
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDumlHvu4kuFwoQZ6TutbeYojeBRTzOlRQ&callback=initMap">
