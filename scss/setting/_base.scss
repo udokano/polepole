@@ -207,8 +207,8 @@ h4 {
 }
 
 body {
-  font-family: Yu Gothic Medium, '游ゴシック Medium', YuGothic, '游ゴシック体',
-    'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
+  font-family: 'Helvetica Now text', Yu Gothic Medium, '游ゴシック Medium',
+    YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', 'メイリオ', sans-serif;
   font-weight: 500;
 
   line-height: 1.7;
@@ -221,7 +221,7 @@ body {
 
 /* WINDOWSの場合 */
 body.windows {
-  // font-family: '游ゴシック Medium', 'Yu Gothic Medium', sans-serif;
+  font-family: '游ゴシック Medium', 'Yu Gothic Medium', sans-serif;
   font-weight: 500;
 }
 
